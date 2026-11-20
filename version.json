@@ -1,8 +1,8 @@
 {
- "version": "1.7.1",
+ "version": "1.7.2",
  "zip": "https://zai.zyeemzia.com/download/ZAI-Engine.zip",
- "sha256": "e332dcaf9bd6ca637fea4c7297e352fb288177230eece041c13fdb09d89dd963",
- "size": 154417,
- "notes": "ZAI now keeps its own guide up to date: after every update it re-learns its starter knowledge, so it can explain the installer, Coworkers, exports, backups and every new feature. Refreshed help text everywhere.",
+ "sha256": "0b4d008c45b3b803135f07842f74eab5664af3077ef07c88fe4b952c5dd24482",
+ "size": 170623,
+ "notes": "ZAI now opens in its own window with the ZAI name and icon on the window and the taskbar, instead of Python's. Your existing desktop and Start menu icons open the new ZAI window automatically.",
  "copyright": "Copyright © ZyeemZia"
 }
