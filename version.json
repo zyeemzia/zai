@@ -1,8 +1,8 @@
 {
- "version": "1.7.2",
+ "version": "1.7.3",
  "zip": "https://zai.zyeemzia.com/download/ZAI-Engine.zip",
- "sha256": "0b4d008c45b3b803135f07842f74eab5664af3077ef07c88fe4b952c5dd24482",
- "size": 170623,
- "notes": "ZAI now opens in its own window with the ZAI name and icon on the window and the taskbar, instead of Python's. Your existing desktop and Start menu icons open the new ZAI window automatically.",
+ "sha256": "27ce40d2da4bc6c3c61d678b87e530c9d91ead520560d5cd80630eae69c4663f",
+ "size": 170917,
+ "notes": "ZAI now always opens in its own window with the ZAI name and icon on the window and the taskbar, instead of Python's, including right after an update. Your existing desktop and Start menu icons open the new ZAI window automatically.",
  "copyright": "Copyright © ZyeemZia"
 }
