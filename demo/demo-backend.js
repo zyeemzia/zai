@@ -103,6 +103,17 @@
     async forget(id) { V.docs = V.docs.filter(d => d.id !== id); V.passages = V.passages.filter(p => p.doc_id !== id); save(V); return { ok: true }; },
     async images() { return []; },
     async templates() { return V.tpl || []; },
+    async coworkers() {
+      let ready = [];
+      try { ready = (await (await fetch('coworkers.json')).json()).map(c => Object.assign(c, { builtin: true })); } catch { /* offline */ }
+      return (V.cw || []).concat(ready);
+    },
+    async saveCoworker(c) {
+      if (!c.name || c.name.length < 2) throw new Error('Give the coworker a name.');
+      const item = Object.assign({}, c, { id: c.id && c.id.startsWith('c') ? c.id : 'c' + Date.now().toString(36), builtin: false });
+      V.cw = [item].concat((V.cw || []).filter(x => x.id !== item.id)); save(V); return item;
+    },
+    async deleteCoworker(id) { V.cw = (V.cw || []).filter(x => x.id !== id); save(V); return { ok: true }; },
     async saveTemplate(name, sample) {
       if (!name || (sample || '').trim().length < 20) throw new Error('Give the format a name and a full sample.');
       V.tpl = (V.tpl || []).filter(t => t.name.toLowerCase() !== name.toLowerCase());

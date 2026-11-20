@@ -7,8 +7,8 @@
 <meta name="robots" content="noindex">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="icon-192.png">
-<link rel="stylesheet" href="app.css?v=143663c83f">
-<link rel="stylesheet" href="icons.css?v=73b62cdddc">
+<link rel="stylesheet" href="app.css?v=f77e4bfa14">
+<link rel="stylesheet" href="icons.css?v=870b459078">
 </head>
 <body>
 <header class="top">
@@ -17,6 +17,7 @@
   <nav class="tabs" role="tablist">
     <button role="tab" data-tab="chat" aria-selected="true"><i class="gi gi-chat" aria-hidden="true"></i>Chat</button>
     <button role="tab" data-tab="studio" aria-selected="false"><i class="gi gi-studio" aria-hidden="true"></i>Studio</button>
+    <button role="tab" data-tab="cowork" aria-selected="false"><i class="gi gi-team" aria-hidden="true"></i>Coworkers</button>
     <button role="tab" data-tab="know" aria-selected="false"><i class="gi gi-book" aria-hidden="true"></i>Knowledge</button>
     <button role="tab" data-tab="share" aria-selected="false"><i class="gi gi-share" aria-hidden="true"></i>Share</button>
     <button role="tab" data-tab="settings" aria-selected="false"><i class="gi gi-gear" aria-hidden="true"></i>Settings</button>
@@ -41,6 +42,7 @@
         </div>
       </div>
     </div>
+    <div class="cwchip" id="cwChip" hidden></div>
     <div class="attach" id="attach" hidden></div>
     <form class="composer" id="composer">
       <button type="button" id="plus" class="tool" aria-label="More: new chat, attach a file, save chat" aria-haspopup="menu" aria-expanded="false" title="New chat, attach, save"><i class="gi gi-plus" aria-hidden="true"></i></button>
@@ -76,7 +78,7 @@
         <div class="card">
           <h2>Your document <small id="dState"></small></h2>
           <div class="doc" id="dOut" contenteditable="true" spellcheck="true" aria-label="Document, editable"></div>
-          <div class="row"><button type="button" class="ghost" id="dSave" title="Use this text as a format in the Template list"><i class="gi gi-star" aria-hidden="true"></i>Save as my format</button><button type="button" class="ghost" id="dCopy"><i class="gi gi-copy" aria-hidden="true"></i>Copy</button><button type="button" class="ghost" id="dWord"><i class="gi gi-download" aria-hidden="true"></i>Word</button><button type="button" class="ghost" id="dTxt"><i class="gi gi-download" aria-hidden="true"></i>Text</button><button type="button" class="ghost" id="dPrint"><i class="gi gi-print" aria-hidden="true"></i>Print</button></div>
+          <div class="row"><button type="button" class="ghost" id="dSave" title="Use this text as a format in the Template list"><i class="gi gi-star" aria-hidden="true"></i>Save as my format</button><button type="button" class="ghost" id="dCopy"><i class="gi gi-copy" aria-hidden="true"></i>Copy</button><button type="button" class="ghost" id="dWord"><i class="gi gi-download" aria-hidden="true"></i>Word</button><button type="button" class="ghost" id="dTxt"><i class="gi gi-download" aria-hidden="true"></i>Text</button><button type="button" class="ghost" id="dExport"><i class="gi gi-export" aria-hidden="true"></i>Export</button><button type="button" class="ghost" id="dPrint"><i class="gi gi-print" aria-hidden="true"></i>Print</button></div>
         </div>
       </div>
     </div>
@@ -114,6 +116,31 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- coworkers -->
+  <section class="pane" id="cowork" hidden>
+    <div class="cw-head">
+      <div><h2><i class="gi gi-team" aria-hidden="true"></i>Coworkers</h2><p class="muted">AI coworkers for every kind of office work. They use what ZAI knows, work offline with a local model, and export to Word, Excel, PowerPoint, PDF, Access, audio, video and more.</p></div>
+      <div class="row"><input id="cwSearch" type="search" placeholder="Find a coworker" aria-label="Find a coworker"><button type="button" class="primary" id="cwNew"><i class="gi gi-plus" aria-hidden="true"></i>New coworker</button></div>
+    </div>
+    <div class="card" id="cwEditor" hidden>
+      <h2 id="cwEditTitle">New coworker</h2>
+      <div class="opts">
+        <label>Name <input id="cwName" maxlength="60" placeholder="Procurement Officer"></label>
+        <label>Role, in a few words <input id="cwRole" maxlength="120" placeholder="Writes purchase requests and compares quotes"></label>
+      </div>
+      <label>How should it work? <textarea id="cwInstr" rows="5" maxlength="4000" placeholder="Always write in our office style. Start with a summary, then a comparison table of suppliers with price, delivery time and warranty. End with a recommendation."></textarea></label>
+      <label>Starter prompts, one per line <textarea id="cwStarters" rows="3" placeholder="Compare these quotations:&#10;Write a purchase request for:"></textarea></label>
+      <div class="opts">
+        <label>Best export <select id="cwExport"></select></label>
+        <label>Online style <select id="cwAgent"><option value="allrounder">All-rounder</option><option value="writer">Writer</option><option value="strategist">Analyst</option><option value="translator">Translator</option><option value="career">Career and HR</option><option value="finance">Finance</option><option value="video">Video</option><option value="music">Music</option></select></label>
+      </div>
+      <div><span class="lbl">Icon</span><div class="cw-icons" id="cwIcons"></div></div>
+      <div class="row"><button type="button" class="primary" id="cwSave"><i class="gi gi-check" aria-hidden="true"></i>Save coworker</button><button type="button" class="ghost" id="cwCancel">Cancel</button></div>
+      <p class="muted small">Coworkers are shared with everyone on your network. Teach ZAI your documents in Knowledge and every coworker uses them.</p>
+    </div>
+    <div id="cwGrid"></div>
   </section>
 
   <!-- knowledge -->
@@ -216,9 +243,10 @@
   </section>
 </main>
 <footer class="foot" id="zz-copy">ZAI by ZyeemZia · <span id="ver"></span> · Copyright © ZyeemZia</footer>
-<script src="seed.js?v=6616a6460f"></script>
-<script src="demo-backend.js?v=149657ca34"></script>
-<script src="app.js?v=b98e1f565d"></script>
-<script src="studio.js?v=fe95a8e6a8"></script>
+<script src="seed.js?v=4df7db00ed"></script>
+<script src="demo-backend.js?v=ebe133ba98"></script>
+<script src="app.js?v=d4d5ca774e"></script>
+<script src="studio.js?v=9faa71743d"></script>
+<script src="coworkers.js?v=3d4a7442a5"></script>
 </body>
 </html>

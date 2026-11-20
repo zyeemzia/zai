@@ -167,3 +167,34 @@ body.wide main { max-width: 1320px; }
 .past button.clear { background: none; color: var(--ink3); justify-self: start; padding: 6px 10px; }
 #mic.listening { box-shadow: inset 0 0 0 1px var(--bad), 0 0 0 5px color-mix(in srgb, var(--bad) 22%, transparent); animation: zpulse 1.2s infinite; }
 .fakebar { display: flex; gap: 8px; align-items: center; justify-content: center; padding: 9px 16px; background: #5a0d1a; color: #ffe4e8; font-weight: 600; font-size: .9rem; text-align: center; }
+
+/* ---------- 1.7: coworkers and export ---------- */
+#cowork { align-items: stretch; gap: 16px; }
+.cw-head { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: flex-end; justify-content: space-between; }
+.cw-head h2 { margin: 0 0 4px; display: flex; align-items: center; gap: 8px; font-size: 1.35rem; }
+.cw-head .muted { max-width: 620px; }
+.cw-head input { padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--panel); min-width: 200px; }
+.cw-h { margin: 6px 0 10px; font-size: .95rem; color: var(--ink2); }
+.cw-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; margin-bottom: 14px; }
+.cw { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 8px; transition: transform .15s, box-shadow .15s, border-color .15s; }
+.cw:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--gold) 55%, var(--line)); box-shadow: 0 14px 30px -20px rgba(0, 0, 0, .6); }
+.cw h3 { margin: 0; font-size: 1.02rem; } .cw p { margin: 0; color: var(--ink2); font-size: .88rem; flex: 1; }
+.cw-ico { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; background: linear-gradient(145deg, #18204a, #0a0f26); box-shadow: inset 0 0 0 1px rgba(232, 190, 90, .45); }
+.cw-ico .gi { width: 24px; height: 24px; margin: 0; }
+.cw-tags { display: flex; gap: 6px; flex-wrap: wrap; } .cw-tags span { font-size: .72rem; padding: 2px 8px; border-radius: 999px; background: var(--panel2); color: var(--ink2); border: 1px solid var(--line); }
+.cw-tags .mine { color: var(--gold); border-color: color-mix(in srgb, var(--gold) 50%, transparent); }
+.cw .row { gap: 6px; } .cw .row button { padding: 8px 11px; font-size: .85rem; } .ghost.icon { padding: 8px 10px; }
+.cw-icons { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.cw-icons button { width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--line); background: var(--panel2); cursor: pointer; display: grid; place-items: center; }
+.cw-icons button .gi { margin: 0; width: 20px; height: 20px; } .cw-icons button[aria-pressed="true"] { border-color: var(--gold); box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold) 25%, transparent); }
+.lbl { font-weight: 600; font-size: .9rem; color: var(--ink2); }
+.cwchip { display: flex; align-items: center; gap: 8px; margin: 0 0 8px; padding: 8px 12px; border-radius: 12px; background: linear-gradient(145deg, #18204a, #0d1330); color: #f6e7b8; border: 1px solid rgba(232, 190, 90, .45); font-size: .88rem; }
+.cwchip span { flex: 1; } .cwchip button { border: 0; background: none; cursor: pointer; padding: 2px; }
+.cw-start { align-self: stretch; text-align: center; display: grid; justify-items: center; gap: 6px; padding: 18px; margin: 8px 0; border-radius: 18px; background: var(--panel); border: 1px solid var(--line); }
+.cw-start h3 { margin: 4px 0 0; } .cw-start p { margin: 0; color: var(--ink2); max-width: 560px; }
+.xmenu { position: fixed; z-index: 60; min-width: 230px; max-height: min(70vh, 520px); overflow-y: auto; display: grid; padding: 6px; border-radius: 14px; background: var(--panel); border: 1px solid var(--line); box-shadow: 0 18px 40px -12px rgba(0, 0, 0, .6); }
+.xmenu b { padding: 6px 10px 4px; font-size: .78rem; color: var(--ink3); text-transform: uppercase; letter-spacing: .06em; }
+.xmenu button { display: flex; align-items: center; gap: 8px; padding: 9px 10px; border: 0; background: none; border-radius: 10px; cursor: pointer; color: var(--ink); text-align: left; font-weight: 600; font-size: .92rem; }
+.xmenu button:hover:not([disabled]), .xmenu button:focus-visible { background: var(--panel2); }
+.xmenu button[disabled] { opacity: .45; cursor: not-allowed; }
+.xmenu small { margin-left: auto; color: var(--gold); font-weight: 700; }

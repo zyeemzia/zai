@@ -1,8 +1,8 @@
 {
- "version": "1.6.0",
+ "version": "1.7.0",
  "zip": "https://zai.zyeemzia.com/download/ZAI-Engine.zip",
- "sha256": "67430eaecada09200e0f5ecdb6f742fbf8640b0bfc95871f3c78a61806e9a6d7",
- "size": 122523,
- "notes": "New: ZAI-Setup.exe, one file that installs ZAI with its own Python (nothing else to install), adds desktop and Start menu icons and an uninstaller. Running it again updates ZAI in place and keeps everything it learned; it also brings over what an earlier unzipped ZAI learned. PDFs now work out of the box.",
+ "sha256": "fa17931c78f0685d9302ca1d486defa279559881b0a6cb30ec48ab50f5a14a53",
+ "size": 151859,
+ "notes": "New: Coworkers. 14 ready-made AI coworkers (Word writer, Excel analyst, PowerPoint builder, database designer, PDF publisher, email, minutes, voice narrator, video explainer, data cleaner, translator, HR, tutor, IT helpdesk) and your own custom ones, working offline with a local model. Export any answer or document to Word, Excel, PowerPoint, PDF, Access, CSV, SQLite, web page, audio (WAV/MP3) and narrated video (MP4). A new installer with a choice of drive and folder, and a matching uninstaller.",
  "copyright": "Copyright © ZyeemZia"
 }
