@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ZAI · Your own AI on your own network · ZyeemZia</title>
+<meta name="description" content="ZAI is a free offline AI engine by ZyeemZia. Download it, double-click, and every device on your local network can use one private AI that learns from your knowledge. No internet needed.">
+<link rel="canonical" href="https://zai.zyeemzia.com/">
+<meta property="og:title" content="ZAI · Your own AI on your own network">
+<meta property="og:description" content="Free offline LAN AI engine by ZyeemZia: one click, a private AI server for everyone on your network, that grows smarter as you teach it.">
+<meta property="og:image" content="https://zai.zyeemzia.com/assets/icon-512.png">
+<meta property="og:url" content="https://zai.zyeemzia.com/">
+<meta name="theme-color" content="#f4f6fb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070a17" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="stylesheet" href="/demo/icons.css?v=73b62cdddc">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ZAI"><meta name="application-name" content="ZAI">
+<script src="/zz-app.js?v=4" data-icon="1" data-sw="/sw.js" data-name="ZAI" defer></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f6fb;--bg2:#e9edf8;--panel:#fff;--line:rgba(30,40,90,.13);--ink:#111633;--ink2:#46507a;--ink3:#7a82a6;--gold:#b8862f;--blue:#2f5bd8;--cyan:#0ea5e9;--grad:linear-gradient(120deg,#c9973d,#2f5bd8 60%,#0ea5e9);--term:#0b1020;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#070a17;--bg2:#0c1124;--panel:#0f1428;--line:rgba(150,165,255,.15);--ink:#eef1ff;--ink2:#b4bce3;--ink3:#7f88b5;--gold:#e2b95c;--blue:#7aa2ff;--cyan:#56e0ff;--grad:linear-gradient(120deg,#e2b95c,#7aa2ff 60%,#56e0ff);--term:#05070f;color-scheme:dark}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.6 Inter,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:radial-gradient(900px 500px at 85% -10%,color-mix(in srgb,var(--blue) 18%,transparent),transparent 60%),radial-gradient(700px 400px at -10% 30%,color-mix(in srgb,var(--gold) 14%,transparent),transparent 60%),var(--bg)}
+a{color:var(--blue)}h1,h2,h3{font-family:Rajdhani,Inter,sans-serif;line-height:1.1;margin:0}
+.wrap{max-width:1140px;margin:0 auto;padding:0 18px}
+.top{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:14px;min-height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:700 1.35rem Rajdhani,sans-serif}
+.logo img{width:34px;height:34px;border-radius:10px}.logo b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.top nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}.top nav a{color:var(--ink2);text-decoration:none;font-weight:600;font-size:.92rem;padding:7px 11px;border-radius:10px}
+.top nav a:hover{background:var(--bg2);color:var(--ink)}.top nav{align-items:center}.nav-install{display:contents}.top .zz-btn{color:var(--ink);padding:8px 13px;font-size:.85rem}@media(max-width:700px){.top .zz-btn{width:38px;height:38px;padding:0;justify-content:center}.top .zz-btn span{display:none}}
+@media(max-width:700px){.top nav a.hide{display:none}}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:13px 22px;font-weight:700;text-decoration:none;border:1px solid var(--line);color:var(--ink);background:var(--panel)}
+.btn.main{background:var(--grad);color:#fff;border:0;box-shadow:0 14px 34px -14px color-mix(in srgb,var(--blue) 70%,transparent)}
+.hero{padding-top:64px;padding-bottom:30px;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+@media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:36px}}
+.eyebrow{display:inline-block;font:700 .82rem Rajdhani,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border:1px solid color-mix(in srgb,var(--gold) 45%,transparent);border-radius:999px;padding:4px 12px}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);margin:16px 0 14px}.hero h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:1.15rem;color:var(--ink2);max-width:560px;margin:0 0 24px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}.tiny{color:var(--ink3);font-size:.85rem;margin-top:12px}
+.term{background:var(--term);color:#cfe3ff;border-radius:18px;border:1px solid rgba(150,165,255,.2);box-shadow:0 30px 70px -30px rgba(0,0,0,.6);overflow:hidden;font:13px/1.6 ui-monospace,Consolas,monospace}
+.term .bar{display:flex;gap:6px;padding:10px 14px;background:rgba(255,255,255,.05)}.term .bar i{width:11px;height:11px;border-radius:50%;background:#ff5f57}.term .bar i:nth-child(2){background:#febc2e}.term .bar i:nth-child(3){background:#28c840}
+.term .bar span{margin-left:8px;color:#8b93b8;font-family:Inter,sans-serif;font-size:12px}
+.term pre{margin:0;padding:16px 18px;white-space:pre-wrap;overflow-wrap:anywhere}.term .g{color:#e2b95c}.term .c{color:#56e0ff}.term .k{color:#7ee787}
+section{padding:56px 0}.sec-h{text-align:center;max-width:700px;margin:0 auto 30px}.sec-h h2{font-size:clamp(1.9rem,5vw,2.8rem)}.sec-h p{color:var(--ink2);margin:10px 0 0}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:22px}.card h3{font-size:1.35rem;margin:10px 0 6px}.card p{margin:0;color:var(--ink2)}
+.ico{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:1.4rem;background:linear-gradient(145deg,#18204a,#0a0f26);box-shadow:inset 0 0 0 1px rgba(232,190,90,.45),0 8px 20px -12px rgba(201,151,61,.9)}.ico .gi{margin:0}li .gi{margin-right:.4em}.btn .gi{margin-right:.4em}.btn.main .gi{filter:drop-shadow(0 0 1px #0a0f26) drop-shadow(0 0 1.5px rgba(10,15,38,.9))}
+.steps{counter-reset:s;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+.steps .card{position:relative;padding-top:30px}.steps .card::before{counter-increment:s;content:counter(s);position:absolute;top:-14px;left:20px;width:34px;height:34px;border-radius:50%;background:var(--grad);color:#fff;font:700 1rem Rajdhani;display:grid;place-items:center}
+.brains{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.brain{border-left:4px solid var(--c)}.brain .tag{font:700 .78rem Rajdhani;letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
+.demo{display:grid;grid-template-columns:1fr 360px;gap:30px;align-items:center}
+@media(max-width:900px){.demo{grid-template-columns:1fr}}
+.phone{width:min(360px,100%);height:700px;margin:0 auto;border-radius:38px;border:10px solid #10142a;background:#10142a;box-shadow:0 30px 80px -30px rgba(0,0,0,.6);overflow:hidden}
+.phone iframe{width:100%;height:100%;border:0;border-radius:28px;background:var(--bg)}
+.demo ul{color:var(--ink2);padding-left:1.2em}.demo li{margin:8px 0}
+.dl{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}@media(max-width:860px){.dl{grid-template-columns:1fr}}
+.dl .card.big{background:linear-gradient(160deg,color-mix(in srgb,var(--gold) 14%,var(--panel)),var(--panel));text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
+.dl .big img{width:96px;height:96px;border-radius:24px;box-shadow:0 18px 40px -16px color-mix(in srgb,var(--gold) 70%,transparent)}
+.facts{list-style:none;padding:0;margin:0;display:grid;gap:8px;width:100%}.facts li{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--line);padding-bottom:6px;font-size:.95rem}.facts b{color:var(--ink)}
+.sha{font:12px ui-monospace,Consolas,monospace;word-break:break-all;background:var(--bg2);padding:8px 10px;border-radius:10px;color:var(--ink2);width:100%}
+ol.how{margin:0;padding-left:1.2em;color:var(--ink2)}ol.how li{margin:8px 0}code{font:.9em ui-monospace,Consolas,monospace;background:var(--bg2);padding:1px 6px;border-radius:6px}
+.journey{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:0;position:relative}
+.journey .card{border-radius:0;border-right-width:0}.journey .card:first-child{border-radius:20px 0 0 20px}.journey .card:last-child{border-radius:0 20px 20px 0;border-right-width:1px}
+@media(max-width:700px){.journey .card,.journey .card:first-child,.journey .card:last-child{border-radius:16px;border-right-width:1px;margin-bottom:10px}}
+.journey .when{font:700 .8rem Rajdhani;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+details{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:10px 0}details summary{cursor:pointer;font-weight:600}details p{color:var(--ink2);margin:10px 0 0}
+.foot{border-top:1px solid var(--line);padding:28px 0 40px;text-align:center;color:var(--ink3);font-size:.92rem}.foot a{color:var(--ink2);margin:0 8px}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="/"><img src="/assets/icon-192.png" alt=""><span>Z<b>AI</b></span></a>
+  <nav><a href="#how" class="hide">How it works</a><a href="#studio" class="hide">Studio</a><a href="#demo">Live demo</a><a href="#download">Download</a><a href="#faq" class="hide">FAQ</a><span class="nav-install" data-zz-install></span></nav>
+</div></header>
+
+<main>
+<div class="wrap hero">
+  <div>
+    <span class="eyebrow">ZyeemZia ZAI · Free · Offline</span>
+    <h1>Your own AI,<br><span>on your own network</span></h1>
+    <p class="lead">Download ZAI, double-click once, and every phone, tablet and computer on your local network can use one private AI. No internet, no accounts, nothing leaves the building. Teach it your knowledge and it grows smarter every day.</p>
+    <div class="cta"><a class="btn main" href="/download/ZAI-Engine.zip" download><i class="gi gi-download" aria-hidden="true"></i>Download for Windows</a><a class="btn" href="#demo"><i class="gi gi-play" aria-hidden="true"></i>Try the live demo</a></div>
+    <p class="tiny">Version 1.5.0 · 107 KB · Windows 10/11 · also Linux and macOS · Python 3</p>
+  </div>
+  <div class="term" aria-label="What the ZAI window shows">
+    <div class="bar"><i></i><i></i><i></i><span>START-ZAI.bat</span></div>
+<pre><span class="g">==============================================================</span>
+  ZAI 1.5.0  ·  ZyeemZia offline LAN AI engine  ·  Copyright © ZyeemZia
+<span class="g">==============================================================</span>
+  Open on this computer:   <span class="c">http://127.0.0.1:8765/</span>
+  Open on the local network: <span class="c">http://192.168.1.20:8765/</span>   &lt;- share this one
+
+  Brain now: <span class="k">local model (qwen2.5:7b) via Ollama, fully offline</span>
+  Online backup brain: <span class="c">ZyeemZia AI (free)</span>
+  Admin PIN: 482913  (needed for settings and removing knowledge)
+  Learned 6 starter document(s) from the knowledge folder.
+  Keep this window open while ZAI is in use.
+<span class="g">==============================================================</span></pre>
+  </div>
+</div>
+
+<section id="how"><div class="wrap">
+  <div class="sec-h"><h2>One click. One server. Everyone on the LAN.</h2><p>ZAI turns a single Windows computer into a private AI server. It finds its own network address and shows it, so anyone on the same Wi-Fi or LAN just opens that address.</p></div>
+  <div class="steps">
+    <div class="card"><h3>Download &amp; unzip</h3><p>One small zip. No installer, no account. Python 3 is the only requirement, and START-ZAI.bat sends you to it if it is missing.</p></div>
+    <div class="card"><h3>Double-click START-ZAI</h3><p>ZAI becomes a server, learns its starter knowledge, opens in your browser and prints the LAN address to share.</p></div>
+    <div class="card"><h3>Everyone connects</h3><p>Phones, tablets and PCs open <code>http://your-ip:8765</code>. Same AI for the whole team, each with their own conversation.</p></div>
+    <div class="card"><h3>Teach it, and it grows</h3><p>Paste notes, upload documents, keep good answers. Every future answer is grounded in what ZAI has learned, with sources shown.</p></div>
+    <div class="card"><h3>It updates itself</h3><p>When a new version is out, ZAI offers it. One tap as admin: it downloads, checks the fingerprint and restarts, keeping all its knowledge.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-h"><h2>Three free brains, chosen automatically</h2><p>ZAI always uses the best brain available and falls back on its own if one stops working. All three are free: no keys, no subscriptions.</p></div>
+  <div class="brains">
+    <div class="card brain" style="--c:#16a34a"><span class="tag">Offline · private</span><h3>Local AI model</h3><p>An open model (Qwen, Llama and others) running on the ZAI computer through Ollama. Download it once with GET-LOCAL-MODEL.bat; after that, ZAI needs no internet at all.</p></div>
+    <div class="card brain" style="--c:#0ea5e9"><span class="tag">Online · free</span><h3>ZyeemZia AI</h3><p>Whenever the computer is online, ZAI can answer with ZyeemZia AI's free open models, grounded in your own knowledge. No key, no account. Lose the connection and it switches back by itself.</p></div>
+    <div class="card brain" style="--c:#c9973d"><span class="tag">Always on</span><h3>Knowledge vault</h3><p>Even with no model at all, ZAI answers straight from everything it has learned, with sources. Nothing to install.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-h"><h2>Built to grow, step by step</h2><p>Start wherever you are today. ZAI grows with you without changing how anyone uses it.</p></div>
+  <div class="journey">
+    <div class="card"><div class="when">Day 1</div><h3>Start online, free</h3><p>Online? ZAI answers with ZyeemZia AI straight away, no key needed, while you build up your knowledge.</p></div>
+    <div class="card"><div class="when">Week 1</div><h3>Go offline</h3><p>Install a local model. ZAI switches to it automatically: same app, no internet.</p></div>
+    <div class="card"><div class="when">Every day</div><h3>Teach it</h3><p>Procedures, manuals, lessons, good answers. The vault grows and answers get sharper.</p></div>
+    <div class="card"><div class="when">Later</div><h3>Scale up</h3><p>A bigger model on a stronger PC. Copy one data folder to move everything ZAI knows.</p></div>
+  </div>
+</div></section>
+
+<section id="studio"><div class="wrap">
+  <div class="sec-h"><h2>ZAI Studio: write, design and compose</h2><p>Beyond answers: ZAI drafts your paperwork, creates pictures and writes songs, for everyone on the network, free.</p></div>
+  <div class="grid">
+    <div class="card"><div class="ico"><i class="gi gi-doc lg" aria-hidden="true"></i></div><h3>Documents</h3><p>Official letters, leave applications, emails, notices, reports, meeting minutes, certificates and cover letters. Fill a few fields; ZAI writes it in your organisation's style, in English, Bangla or any language. Edit, then copy, print or save as Word.</p></div>
+    <div class="card"><div class="ico"><i class="gi gi-image lg" aria-hidden="true"></i></div><h3>Pictures</h3><p>Posters, illustrations, logo ideas, photos and art for kids from a sentence, with style presets. Free online through ZyeemZia AI, or fully offline with a local Stable Diffusion on a PC with a graphics card. A shared gallery for the whole network.</p></div>
+    <div class="card"><div class="ico"><i class="gi gi-music lg" aria-hidden="true"></i></div><h3>Songs</h3><p>Original songs in Bangla, English, Arabic and more: verses and chorus with chords, key, tempo and strumming, in folk, pop, anthem, nasheed or lullaby style. Lyrics and music on paper, ready to play.</p></div>
+    <div class="card"><div class="ico"><i class="gi gi-brain lg" aria-hidden="true"></i></div><h3>Learns your style</h3><p>Teach ZAI your letterhead, names, formats and past documents in Knowledge, and every draft follows them. Quick drafts from templates work even with no AI at all.</p></div>
+  </div>
+</div></section>
+
+<section id="demo"><div class="wrap demo">
+  <div>
+    <div class="sec-h" style="text-align:left;margin:0 0 16px"><h2>Try it right here</h2><p>This is the real ZAI app, running in your browser with the engine's knowledge vault.</p></div>
+    <ul>
+      <li><i class="gi gi-chat" aria-hidden="true"></i><b>Ask</b> about ZAI, AI ideas, networking or cybersecurity: the starter knowledge.</li>
+      <li><i class="gi gi-book" aria-hidden="true"></i><b>Teach it</b> in Knowledge: paste a few facts about your team, then ask about them.</li>
+      <li><i class="gi gi-thumb" aria-hidden="true"></i><b>Learn this</b> keeps a good answer for next time.</li>
+      <li><i class="gi gi-studio" aria-hidden="true"></i><b>Studio</b>: make a quick letter draft from a template (the full engine writes it with AI, creates pictures and songs).</li>
+      <li><i class="gi gi-lock" aria-hidden="true"></i>What you teach the demo stays in <b>your browser</b> only.</li>
+    </ul>
+    <p class="tiny">The demo answers from the vault alone. The downloaded engine adds the LAN server and a real AI model that writes full answers from these sources.</p>
+    <p><a class="btn" href="/demo/" target="_blank" rel="noopener">Open the demo full screen <i class="gi gi-ext" aria-hidden="true"></i></a></p>
+  </div>
+  <div class="phone"><iframe src="/demo/" title="ZAI live demo" loading="lazy"></iframe></div>
+</div></section>
+
+<section id="download"><div class="wrap">
+  <div class="sec-h"><h2>Download ZAI</h2><p>Free for everyone. Unzip anywhere, double-click, done.</p></div>
+  <div class="dl">
+    <div class="card big">
+      <img src="/assets/icon-512.png" alt="">
+      <h3 style="font-size:1.7rem">ZAI Engine 1.5.0</h3>
+      <a class="btn main" href="/download/ZAI-Engine.zip" download><i class="gi gi-download" aria-hidden="true"></i>Download ZAI-Engine.zip (107 KB)</a>
+      <ul class="facts">
+        <li><b>Runs on</b><span>Windows 10/11 · Linux · macOS</span></li>
+        <li><b>Needs</b><span>Python 3.9 or newer</span></li>
+        <li><b>Local model</b><span>Optional, via free Ollama</span></li>
+        <li><b>Network</b><span>Any LAN or Wi-Fi, no internet</span></li>
+        <li><b>Price</b><span>Free</span></li>
+      </ul>
+      <p class="tiny" style="margin:0">SHA-256 of the zip:</p>
+      <div class="sha">6344d7d0be5973a7a8576e48cd2efcd6a99081b310ba88685819773e5644e719</div>
+    </div>
+    <div class="card">
+      <h3>Set up in five minutes</h3>
+      <ol class="how">
+        <li>Unzip <b>ZAI-Engine.zip</b> on the computer that will be the server.</li>
+        <li>Double-click <b>START-ZAI.bat</b>. If Python is missing, it opens the download page: install it (tick <i>Add python.exe to PATH</i>) and run START-ZAI again.</li>
+        <li>When Windows asks about the firewall, allow <b>Private networks</b>.</li>
+        <li>Share the network address shown in the window. Everyone on the LAN can now use ZAI.</li>
+        <li>For a real offline AI model, run <b>GET-LOCAL-MODEL.bat</b> once while online. ZAI picks it up automatically.</li>
+      </ol>
+      <p class="tiny">Online, ZAI also answers with ZyeemZia AI for free. Optional: <b>ENABLE-EXTRAS.bat</b> lets ZAI read PDFs; <b>ENABLE-CLOUD.bat</b> adds Claude for anyone with their own paid key. ZAI updates itself from Settings. Everything ZAI learns lives in its <code>data</code> folder: copy it to back up or move.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap" style="max-width:820px">
+  <div class="sec-h"><h2>Questions</h2></div>
+  <details><summary>Is ZAI really free? What about Claude?</summary><p>Yes, ZAI is free, and so are all three of its brains: the local model, ZyeemZia AI online, and the knowledge vault. Claude is not free: it is billed by Anthropic per use. ZAI keeps it as an optional extra for anyone who wants to add their own Claude API key in Settings; nobody needs it.</p></details>
+  <details><summary>Can ZAI make videos or real music audio?</summary><p>Not yet. ZAI Studio writes documents, creates pictures and writes songs with chords. Generating video and recorded music needs much heavier AI models; they are on the roadmap and will arrive through ZAI's automatic updates when they can run well on ordinary computers.</p></details>
+  <details><summary>Is my copy genuine and safe?</summary><p>Every official ZAI is sealed: each program file carries a fingerprint, checked every time ZAI starts. If anything has been changed, ZAI shows that the copy is not genuine and, when it is online, restores the official files by itself, keeping everything it has learned. Always download ZAI from zai.zyeemzia.com. ZAI is free to use; changing, unpacking or redistributing it is not allowed (see LICENSE.txt).</p></details>
+  <details><summary>How do updates work?</summary><p>Whenever it is online, ZAI checks zai.zyeemzia.com for a new version. When one is ready, a banner appears; the admin presses <b>Update now</b>, ZAI downloads the new version, checks its fingerprint, and restarts itself. Everything it has learned stays exactly as it was.</p></details>
+  <details><summary>Does ZAI really work with no internet?</summary><p>Yes. With a local model installed (one download while online), ZAI runs entirely on your network. Without a model, it still answers from its knowledge vault. The internet is only used if you choose the optional Claude brain.</p></details>
+  <details><summary>How does it "become smarter day by day"?</summary><p>Through its knowledge vault. Everything you teach (notes, documents, good answers) is stored and searched before every answer, so ZAI answers from your organisation's own knowledge, with sources. This is retrieval-augmented generation (RAG): fast, transparent and fully under your control. You can also move to a bigger local model at any time.</p></details>
+  <details><summary>What computer do I need?</summary><p>Any Windows 10 or 11 PC runs ZAI and the knowledge vault. For a local AI model, the small model runs on most PCs with 8 GB of memory; a graphics card with 8 GB or more makes medium and large models fast.</p></details>
+  <details><summary>Is our data private?</summary><p>Yes. The knowledge, conversations and settings stay in the data folder on the ZAI computer. With the local model or the vault, nothing leaves the network. When ZAI answers online (ZyeemZia AI, or Claude if you add a key), the question and its matching passages are sent to produce the answer; nothing is stored there. Set the brain to Local only in Settings to keep every question inside the building.</p></details>
+  <details><summary>Who can change settings?</summary><p>Settings and removing knowledge need the admin PIN shown in the ZAI window. The admin can also limit teaching to the admin only.</p></details>
+  <details><summary>Can others on the LAN not connect?</summary><p>On the ZAI computer, set the Windows network to Private and allow Python through the firewall for private networks. Make sure both devices are on the same network, then open the address shown in the ZAI window.</p></details>
+</div></section>
+</main>
+
+<footer class="foot"><div class="wrap">
+  <p>ZAI is made by ZyeemZia: free, offline first, private by design.</p>
+  <p><a href="https://zyeemzia.com">zyeemzia.com</a><a href="https://ai.zyeemzia.com">ZyeemZia AI</a><a href="https://academy.zyeemzia.com">Academy</a><a href="https://zbzgames.zyeemzia.com">ZBZGames</a><a href="https://policy.zyeemzia.com">Policies</a></p>
+  <p>Copyright © ZyeemZia</p>
+</div></footer>
+</body>
+</html>

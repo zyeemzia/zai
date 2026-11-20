@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ZAI live demo · ZyeemZia</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="icon-192.png">
+<link rel="stylesheet" href="app.css?v=143663c83f">
+<link rel="stylesheet" href="icons.css?v=73b62cdddc">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><img src="icon-192.png" width="34" height="34" alt=""><div><b id="appName">ZAI</b><small>Offline LAN AI · ZyeemZia</small></div></div>
+  <div class="status"><span class="brain" id="brain" title="Which brain is answering">…</span></div>
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="chat" aria-selected="true"><i class="gi gi-chat" aria-hidden="true"></i>Chat</button>
+    <button role="tab" data-tab="studio" aria-selected="false"><i class="gi gi-studio" aria-hidden="true"></i>Studio</button>
+    <button role="tab" data-tab="know" aria-selected="false"><i class="gi gi-book" aria-hidden="true"></i>Knowledge</button>
+    <button role="tab" data-tab="share" aria-selected="false"><i class="gi gi-share" aria-hidden="true"></i>Share</button>
+    <button role="tab" data-tab="settings" aria-selected="false"><i class="gi gi-gear" aria-hidden="true"></i>Settings</button>
+  </nav>
+</header>
+
+<div class="fakebar" id="fakebar" hidden><i class="gi gi-warn" aria-hidden="true"></i><span>This copy of ZAI has been changed and is not genuine. Get the official ZAI free from zai.zyeemzia.com.</span></div>
+  <div class="upbar" id="upbar" hidden><span><i class="gi gi-spark" aria-hidden="true"></i><b id="upVer"></b> is available.</span><button type="button" id="upGo">Update</button></div>
+<main>
+  <!-- chat -->
+  <section class="pane" id="chat">
+    <div class="thread" id="thread" aria-live="polite">
+      <div class="hello" id="hello">
+        <img src="icon-192.png" width="72" height="72" alt="">
+        <h1>Ask <span id="helloName">ZAI</span> anything</h1>
+        <p>Private AI for your local network. It answers from what it has learned, and it learns more every time you teach it.</p>
+        <div class="chips">
+          <button data-q="What is ZAI and how does it learn?">What is ZAI and how does it learn?</button>
+          <button data-q="How do I let others on the LAN use ZAI?">How do others on the LAN use it?</button>
+          <button data-q="Explain RAG in simple words">Explain RAG simply</button>
+          <button data-q="Give me five cybersecurity rules for our office">5 security rules for our office</button>
+        </div>
+      </div>
+    </div>
+    <div class="attach" id="attach" hidden></div>
+    <form class="composer" id="composer">
+      <button type="button" id="plus" class="tool" aria-label="More: new chat, attach a file, save chat" aria-haspopup="menu" aria-expanded="false" title="New chat, attach, save"><i class="gi gi-plus" aria-hidden="true"></i></button>
+      <div class="pmenu" id="pmenu" role="menu" hidden>
+        <button type="button" role="menuitem" data-m="new"><i class="gi gi-chat" aria-hidden="true"></i>New chat</button>
+        <button type="button" role="menuitem" data-m="past"><i class="gi gi-history" aria-hidden="true"></i>Past chats</button>
+        <button type="button" role="menuitem" data-m="file"><i class="gi gi-clip" aria-hidden="true"></i>Ask about a file</button>
+        <button type="button" role="menuitem" data-m="save"><i class="gi gi-download" aria-hidden="true"></i>Save this chat</button>
+      </div>
+      <input type="file" id="askFile" hidden accept=".txt,.md,.csv,.json,.html,.htm,.docx,.pdf,.log,.xml,.yaml,.yml,.py,.js">
+      <textarea id="input" rows="1" placeholder="Message ZAI…" aria-label="Your message"></textarea>
+      <button type="button" id="mic" class="tool" hidden aria-label="Speak your message" title="Voice typing"><i class="gi gi-mic" aria-hidden="true"></i></button>
+      <button type="submit" id="send" aria-label="Send"><i class="gi gi-send" aria-hidden="true"></i></button>
+    </form>
+  </section>
+
+  <!-- studio -->
+  <section class="pane" id="studio" hidden>
+    <div class="seg" role="tablist" aria-label="Studio">
+      <button type="button" data-st="doc" aria-pressed="true"><i class="gi gi-doc" aria-hidden="true"></i>Documents</button>
+      <button type="button" data-st="img" aria-pressed="false"><i class="gi gi-image" aria-hidden="true"></i>Pictures</button>
+      <button type="button" data-st="song" aria-pressed="false"><i class="gi gi-music" aria-hidden="true"></i>Songs</button>
+    </div>
+    <div class="st-pane" id="st-doc">
+      <div class="cols">
+        <div class="card">
+          <h2>Write a document</h2>
+          <div class="tplrow"><label>Template <select id="dTpl"></select></label><button type="button" class="ghost" id="dDel" hidden title="Remove this format (admin PIN)" aria-label="Remove this format"><i class="gi gi-trash" aria-hidden="true"></i></button></div>
+          <div id="dFields" class="fields"></div>
+          <div class="row"><button class="primary" type="button" id="dGo"><i class="gi gi-spark" aria-hidden="true"></i>Write it</button><button type="button" class="ghost" id="dDraft"><i class="gi gi-doc" aria-hidden="true"></i>Quick draft (no AI)</button></div>
+          <p class="muted small" id="dHint"></p>
+        </div>
+        <div class="card">
+          <h2>Your document <small id="dState"></small></h2>
+          <div class="doc" id="dOut" contenteditable="true" spellcheck="true" aria-label="Document, editable"></div>
+          <div class="row"><button type="button" class="ghost" id="dSave" title="Use this text as a format in the Template list"><i class="gi gi-star" aria-hidden="true"></i>Save as my format</button><button type="button" class="ghost" id="dCopy"><i class="gi gi-copy" aria-hidden="true"></i>Copy</button><button type="button" class="ghost" id="dWord"><i class="gi gi-download" aria-hidden="true"></i>Word</button><button type="button" class="ghost" id="dTxt"><i class="gi gi-download" aria-hidden="true"></i>Text</button><button type="button" class="ghost" id="dPrint"><i class="gi gi-print" aria-hidden="true"></i>Print</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="st-pane" id="st-img" hidden>
+      <div class="cols">
+        <div class="card">
+          <h2>Create a picture</h2>
+          <textarea id="iPrompt" rows="4" placeholder="Describe it: a modern office poster about cyber safety, blue and gold, clean design"></textarea>
+          <div class="chips left" id="iStyles"></div>
+          <button class="primary" type="button" id="iGo"><i class="gi gi-studio" aria-hidden="true"></i>Create picture</button>
+          <p class="msg" id="iMsg" role="status"></p>
+          <p class="muted small" id="iHow"></p>
+        </div>
+        <div class="card">
+          <h2>Gallery <small>shared on this network</small></h2>
+          <div class="gallery" id="iGallery"></div>
+        </div>
+      </div>
+    </div>
+    <div class="st-pane" id="st-song" hidden>
+      <div class="cols">
+        <div class="card">
+          <h2>Write a song</h2>
+          <label>What is it about? <input id="sTopic" placeholder="Monsoon rain over the river, missing home"></label>
+          <label>Language <select id="sLang"><option>Bangla</option><option>English</option><option>Arabic</option><option>Hindi</option><option>French</option></select></label>
+          <label>Mood <select id="sMood"><option>Uplifting</option><option>Romantic</option><option>Sad</option><option>Patriotic</option><option>Peaceful</option><option>Energetic</option><option>For children</option></select></label>
+          <label>Style <select id="sStyle"><option>Folk (Baul / Bhatiyali feel)</option><option>Pop</option><option>Rock</option><option>Acoustic ballad</option><option>Anthem</option><option>Nasheed (voice only)</option><option>Lullaby</option></select></label>
+          <button class="primary" type="button" id="sGo"><i class="gi gi-music" aria-hidden="true"></i>Write the song</button>
+          <p class="muted small">Writes original lyrics with chords, key, tempo and strumming. Audio is not generated.</p>
+        </div>
+        <div class="card">
+          <h2>Your song <small id="sState"></small></h2>
+          <div class="doc song" id="sOut" contenteditable="true" aria-label="Song, editable"></div>
+          <div class="row"><button type="button" class="ghost" id="sCopy"><i class="gi gi-copy" aria-hidden="true"></i>Copy</button><button type="button" class="ghost" id="sTxt"><i class="gi gi-download" aria-hidden="true"></i>Text</button><button type="button" class="ghost" id="sPrint"><i class="gi gi-print" aria-hidden="true"></i>Print</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- knowledge -->
+  <section class="pane" id="know" hidden>
+    <div class="cols">
+      <div class="card">
+        <h2>Teach ZAI</h2>
+        <p class="muted">Paste notes, procedures, manuals or facts. ZAI uses them in every future answer.</p>
+        <input id="kTitle" placeholder="Title (optional)">
+        <textarea id="kText" rows="7" placeholder="What should ZAI learn?"></textarea>
+        <label class="check"><input type="checkbox" id="kFormat"> This is a document format (letter, memo…): add it to Studio's Template list</label>
+        <div class="row">
+          <button class="primary" id="kTeach"><i class="gi gi-brain" aria-hidden="true"></i>Teach</button>
+          <label class="file"><i class="gi gi-clip" aria-hidden="true"></i>Upload files<input type="file" id="kFile" multiple accept=".txt,.md,.csv,.json,.html,.htm,.docx,.pdf,.log,.xml,.yaml,.yml,.py,.js"></label>
+        </div>
+        <p class="msg" id="kMsg" role="status"></p>
+      </div>
+      <div class="card">
+        <h2>What ZAI knows <small id="kCount"></small></h2>
+        <input id="kSearch" type="search" placeholder="Search the knowledge vault…">
+        <ul class="docs" id="kList"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- share -->
+  <section class="pane" id="share" hidden>
+    <div class="card center">
+      <h2>Use ZAI on any device on this network</h2>
+      <p class="muted">Open one of these addresses on a phone, tablet or computer connected to the same Wi-Fi or LAN. No internet needed.</p>
+      <div id="urls" class="urls"></div>
+      <p class="muted small">If a device cannot connect: on the ZAI computer, set the Windows network to <b>Private</b> and allow Python through the firewall for private networks.</p>
+    </div>
+  </section>
+
+  <!-- settings -->
+  <section class="pane" id="settings" hidden>
+    <div class="card">
+      <h2>Settings</h2>
+      <p class="muted">Changes need the admin PIN shown in the ZAI window on the host computer.</p>
+      <label>Admin PIN <input id="sPin" type="password" inputmode="numeric" autocomplete="off"></label>
+      <label>Name <input id="sName"></label>
+      <label>Brain
+        <select id="sBrain">
+          <option value="auto">Auto (free): local model, then ZyeemZia AI online, then vault</option>
+          <option value="local">Local model only (offline, free)</option>
+          <option value="online">ZyeemZia AI online (free, needs internet)</option>
+          <option value="vault">Knowledge vault only (no model, free)</option>
+          <option value="cloud">Claude (optional: your own paid API key)</option>
+        </select>
+      </label>
+      <label>Local model (Ollama) <input id="sModel" placeholder="empty = first installed model"></label>
+      <label>Ollama address <input id="sOllama" placeholder="http://127.0.0.1:11434"></label>
+      <details class="adv"><summary>Optional: Claude with your own paid API key</summary>
+        <p class="muted small">Not needed: ZAI is free with its local model and ZyeemZia AI online. Claude is billed by Anthropic to your own key; run ENABLE-CLOUD.bat once while online first.</p>
+        <label>Claude model <input id="sCloud" placeholder="claude-opus-5-5"></label>
+        <label>Anthropic API key <input id="sKey" type="password" autocomplete="off" placeholder="leave empty to keep the current key"></label>
+      </details>
+      <label class="check"><input type="checkbox" id="sOpen"> Anyone on the network can teach ZAI</label>
+      <button class="primary" id="sSave">Save settings</button>
+      <p class="msg" id="sMsg" role="status"></p>
+      <div class="info" id="sInfo"></div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <h2>Appearance <small>this device</small></h2>
+      <div class="opts">
+        <label>Theme <select id="aTheme"><option value="auto">Auto (follow device)</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
+        <label>Accent <select id="aAccent"><option value="gold">Royal gold</option><option value="ocean">Ocean blue</option><option value="emerald">Emerald</option><option value="rose">Rose</option><option value="violet">Violet</option></select></label>
+        <label>Text size <select id="aSize"><option value="14">Small</option><option value="15">Normal</option><option value="17">Large</option><option value="19">Extra large</option></select></label>
+        <label>Voice typing language <select id="aVoice"><option value="">Device language</option><option value="bn-BD">Bangla</option><option value="en-US">English</option><option value="ar-SA">Arabic</option><option value="hi-IN">Hindi</option><option value="fr-FR">French</option></select></label>
+        <label>Read-aloud speed <select id="aRate"><option value="0.85">Slow</option><option value="1">Normal</option><option value="1.2">Fast</option></select></label>
+      </div>
+      <label class="check"><input type="checkbox" id="aEnter" checked> Enter sends the message (Shift+Enter for a new line)</label>
+      <label class="check"><input type="checkbox" id="aWide"> Wide layout on big screens</label>
+      <button type="button" class="ghost" id="aReset"><i class="gi gi-refresh" aria-hidden="true"></i>Default look</button>
+    </div>
+    <div class="card" style="margin-top:16px" id="bCard">
+      <h2>Backup and restore</h2>
+      <p class="muted">One file holds everything: knowledge, conversations, settings, your formats and pictures. ZAI also makes an automatic backup every day and keeps the last 7. Needs the admin PIN above.</p>
+      <div class="row"><button class="primary" type="button" id="bMake"><i class="gi gi-download" aria-hidden="true"></i>Back up now</button><label class="file"><i class="gi gi-up" aria-hidden="true"></i>Restore from a file<input type="file" id="bFile" accept=".zip"></label><button type="button" class="ghost" id="bList"><i class="gi gi-refresh" aria-hidden="true"></i>Show backups</button></div>
+      <ul class="docs" id="bItems"></ul>
+      <details class="adv"><summary>Reset options</summary>
+        <p class="muted small">A safety backup is always made first, so every reset can be undone with Restore.</p>
+        <div class="row">
+          <button type="button" class="ghost" data-reset="chats">Clear conversations</button>
+          <button type="button" class="ghost" data-reset="settings">Default settings</button>
+          <button type="button" class="ghost" data-reset="knowledge">Fresh knowledge (starter only)</button>
+          <button type="button" class="ghost danger" data-reset="factory">Factory reset</button>
+        </div>
+      </details>
+      <p class="msg" id="bMsg" role="status"></p>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <h2>Updates</h2>
+      <p class="muted">ZAI checks zai.zyeemzia.com for new versions whenever it is online. Updating keeps everything ZAI has learned.</p>
+      <p id="uState" class="info">Checking…</p>
+      <div class="row"><button type="button" id="uCheck"><i class="gi gi-refresh" aria-hidden="true"></i>Check now</button><button class="primary" type="button" id="uApply" hidden><i class="gi gi-up" aria-hidden="true"></i>Update now</button></div>
+      <p class="msg" id="uMsg" role="status"></p>
+    </div>
+  </section>
+</main>
+<footer class="foot" id="zz-copy">ZAI by ZyeemZia · <span id="ver"></span> · Copyright © ZyeemZia</footer>
+<script src="seed.js?v=b68f28643f"></script>
+<script src="demo-backend.js?v=149657ca34"></script>
+<script src="app.js?v=b98e1f565d"></script>
+<script src="studio.js?v=fe95a8e6a8"></script>
+</body>
+</html>
