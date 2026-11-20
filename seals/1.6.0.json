@@ -1,0 +1,23 @@
+{
+ "ENABLE-CLOUD.bat": "b7c33560d8def2f83772ab63f86bf98041fec82c75d8268d1db32fe5f7f64018",
+ "ENABLE-EXTRAS.bat": "e138ba63bce43b65ac4106ef375bea248ec196aaa8cb84d95ac5a4e1bd1e2a5d",
+ "GET-LOCAL-MODEL.bat": "9d81817a3d0211c8607021a8b54338b62b8f00d00e1e3c18f5e398b33afc7699",
+ "LICENSE.txt": "30a868fa21299e9c4659344bf7c6688fa6577353747399e7521257d4cee6204f",
+ "README.md": "e121cc100bbbedb9fe5fd8c6376175bd8994552e0468cd0a5d8e29c34f6e1c45",
+ "START-ZAI.bat": "ed661674c36b79123d608550b884feebed06af29c6e946218bcba786d37dce07",
+ "ZAI.ico": "17d2839dfaeb82e5176a30c75c05d16ec21b3c0a67934fe1df2b7283527154c5",
+ "knowledge/01-about-zai.md": "ed87f15fa61b959966f0a1d1ff349bc2fdd045449c185fdff0c54e2aa35430e9",
+ "knowledge/02-using-zai.md": "dcb7542b2f3c41e6427b0a759355b24ee774f790544a3c409bdb683724e32b93",
+ "knowledge/03-modern-ai-ideas.md": "f55b3ba0cbc8b0d5d29cf7c3436eb0e52e96d625dcbf4b330e6cb1af98852185",
+ "knowledge/04-cybersecurity-essentials.md": "2837f627b31e04e55eadd068c91e41aa1f8f23ac75e03374719a51b87aeeee06",
+ "knowledge/05-networking-essentials.md": "86739ec57d148c793c95b23d45ab84a5491a8a98eb96f9cf929b821ec39610e9",
+ "knowledge/06-zyeemzia.md": "0f9bc246ca267f069c6cc8ba77505ccf0b0b86cf8080477ef699128070a83353",
+ "start-zai.sh": "ac38dd8770d086b133819e707e4ae3cbcad6d80f80b8db62053de7e24fd6b5eb",
+ "web/app.css": "143663c83fc17d05494c85b76f343ef89f102ce32880bb9c964357a436dbef74",
+ "web/app.js": "b98e1f565d650805919e788f038c2e31b1249d5c0c71b1b86e9053f0bc2a3b47",
+ "web/icon-192.png": "2e72aba7465ea22bcb5706ca512c278858f2db49e0f8ba355a028cf76f3f4792",
+ "web/icons.css": "73b62cdddc32bd506cc81c555be08594330541ff1c94dc8e5f0c35e1bb965d7e",
+ "web/index.html": "f29b6c85d0c90a4d09e190c0678de0a06d8a476927af984a284e0017b2cd8d9b",
+ "web/studio.js": "fe95a8e6a87206cbfbb85e83761acfa1077eac7fa1691c64119a138d50f54316",
+ "zai_server.py": "c4e9aef2c9ff5fcb7407217466873320e77054a5abff72461adb37654453b081"
+}

@@ -88,13 +88,13 @@ details{background:var(--panel);border:1px solid var(--line);border-radius:16px;
     <span class="eyebrow">ZyeemZia ZAI · Free · Offline</span>
     <h1>Your own AI,<br><span>on your own network</span></h1>
     <p class="lead">Download ZAI, double-click once, and every phone, tablet and computer on your local network can use one private AI. No internet, no accounts, nothing leaves the building. Teach it your knowledge and it grows smarter every day.</p>
-    <div class="cta"><a class="btn main" href="/download/ZAI-Engine.zip" download><i class="gi gi-download" aria-hidden="true"></i>Download for Windows</a><a class="btn" href="#demo"><i class="gi gi-play" aria-hidden="true"></i>Try the live demo</a></div>
-    <p class="tiny">Version 1.5.0 · 107 KB · Windows 10/11 · also Linux and macOS · Python 3</p>
+    <div class="cta"><a class="btn main" href="/download/ZAI-Setup.exe" download><i class="gi gi-download" aria-hidden="true"></i>Download for Windows</a><a class="btn" href="#demo"><i class="gi gi-play" aria-hidden="true"></i>Try the live demo</a></div>
+    <p class="tiny">Version 1.6.0 · 120 KB · Windows 10/11 · also Linux and macOS · Python 3</p>
   </div>
   <div class="term" aria-label="What the ZAI window shows">
     <div class="bar"><i></i><i></i><i></i><span>START-ZAI.bat</span></div>
 <pre><span class="g">==============================================================</span>
-  ZAI 1.5.0  ·  ZyeemZia offline LAN AI engine  ·  Copyright © ZyeemZia
+  ZAI 1.6.0  ·  ZyeemZia offline LAN AI engine  ·  Copyright © ZyeemZia
 <span class="g">==============================================================</span>
   Open on this computer:   <span class="c">http://127.0.0.1:8765/</span>
   Open on the local network: <span class="c">http://192.168.1.20:8765/</span>   &lt;- share this one
@@ -165,32 +165,33 @@ details{background:var(--panel);border:1px solid var(--line);border-radius:16px;
 </div></section>
 
 <section id="download"><div class="wrap">
-  <div class="sec-h"><h2>Download ZAI</h2><p>Free for everyone. Unzip anywhere, double-click, done.</p></div>
+  <div class="sec-h"><h2>Download ZAI</h2><p>Free for everyone. One file: double-click, done. Python is included.</p></div>
   <div class="dl">
     <div class="card big">
       <img src="/assets/icon-512.png" alt="">
-      <h3 style="font-size:1.7rem">ZAI Engine 1.5.0</h3>
-      <a class="btn main" href="/download/ZAI-Engine.zip" download><i class="gi gi-download" aria-hidden="true"></i>Download ZAI-Engine.zip (107 KB)</a>
+      <h3 style="font-size:1.7rem">ZAI Engine 1.6.0</h3>
+      <a class="btn main" href="/download/ZAI-Setup.exe" download><i class="gi gi-download" aria-hidden="true"></i>Download ZAI-Setup.exe (11.4 MB)</a>
+      <p class="tiny" style="margin:0">Linux, macOS or a portable copy: <a href="/download/ZAI-Engine.zip" download>ZAI-Engine.zip (120 KB)</a>, needs Python 3.9+.</p>
       <ul class="facts">
         <li><b>Runs on</b><span>Windows 10/11 · Linux · macOS</span></li>
-        <li><b>Needs</b><span>Python 3.9 or newer</span></li>
+        <li><b>Needs</b><span>Nothing else on Windows (Python built in)</span></li>
         <li><b>Local model</b><span>Optional, via free Ollama</span></li>
         <li><b>Network</b><span>Any LAN or Wi-Fi, no internet</span></li>
         <li><b>Price</b><span>Free</span></li>
       </ul>
-      <p class="tiny" style="margin:0">SHA-256 of the zip:</p>
-      <div class="sha">6344d7d0be5973a7a8576e48cd2efcd6a99081b310ba88685819773e5644e719</div>
+      <p class="tiny" style="margin:0">SHA-256 of ZAI-Setup.exe:</p>
+      <div class="sha">dd370948ad31a8c8091191f3a22df550773943b295b26e1bf8b24fc163065bbb</div>
     </div>
     <div class="card">
       <h3>Set up in five minutes</h3>
       <ol class="how">
-        <li>Unzip <b>ZAI-Engine.zip</b> on the computer that will be the server.</li>
-        <li>Double-click <b>START-ZAI.bat</b>. If Python is missing, it opens the download page: install it (tick <i>Add python.exe to PATH</i>) and run START-ZAI again.</li>
+        <li>Run <b>ZAI-Setup.exe</b> on the computer that will be the server. If Windows says it protected your PC, choose <i>More info</i> then <i>Run anyway</i>. No admin rights needed.</li>
+        <li>ZAI starts and opens in your browser. Next time, use the <b>ZAI</b> icon on the desktop or in the Start menu.</li>
         <li>When Windows asks about the firewall, allow <b>Private networks</b>.</li>
         <li>Share the network address shown in the window. Everyone on the LAN can now use ZAI.</li>
         <li>For a real offline AI model, run <b>GET-LOCAL-MODEL.bat</b> once while online. ZAI picks it up automatically.</li>
       </ol>
-      <p class="tiny">Online, ZAI also answers with ZyeemZia AI for free. Optional: <b>ENABLE-EXTRAS.bat</b> lets ZAI read PDFs; <b>ENABLE-CLOUD.bat</b> adds Claude for anyone with their own paid key. ZAI updates itself from Settings. Everything ZAI learns lives in its <code>data</code> folder: copy it to back up or move.</p>
+      <p class="tiny">Online, ZAI also answers with ZyeemZia AI for free. PDFs work out of the box. <b>ENABLE-CLOUD.bat</b> adds Claude for anyone with their own paid key. ZAI updates itself from Settings. Running a newer ZAI-Setup.exe also updates an installed ZAI and keeps everything it learned; setup even brings over what an earlier unzipped ZAI learned. Backups and restore are in Settings.</p>
     </div>
   </div>
 </div></section>

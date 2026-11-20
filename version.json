@@ -1,8 +1,8 @@
 {
- "version": "1.5.0",
+ "version": "1.6.0",
  "zip": "https://zai.zyeemzia.com/download/ZAI-Engine.zip",
- "sha256": "6344d7d0be5973a7a8576e48cd2efcd6a99081b310ba88685819773e5644e719",
- "size": 109988,
- "notes": "New: Past chats (pick up any conversation from the + menu), Try again on any answer, and voice typing with the microphone button (Bangla, English and more). ZAI is now sealed: every file is fingerprinted, a changed copy shows it is not genuine and repairs itself from the official package. Everything you taught is kept.",
+ "sha256": "67430eaecada09200e0f5ecdb6f742fbf8640b0bfc95871f3c78a61806e9a6d7",
+ "size": 122523,
+ "notes": "New: ZAI-Setup.exe, one file that installs ZAI with its own Python (nothing else to install), adds desktop and Start menu icons and an uninstaller. Running it again updates ZAI in place and keeps everything it learned; it also brings over what an earlier unzipped ZAI learned. PDFs now work out of the box.",
  "copyright": "Copyright © ZyeemZia"
 }
