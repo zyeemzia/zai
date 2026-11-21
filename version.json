@@ -1,10 +1,10 @@
 {
- "version": "2.0.0",
+ "version": "2.0.1",
  "zip": "https://zbzai.zyeemzia.com/download/ZAI-Update.zip",
- "sha256": "78d1d7339b93a7dd0492cfdf1f61031fc8857f4d83095f638e525b4cd99a0df5",
+ "sha256": "53d06d3f5e4e0e9e16c47c7cb397cc456b350c97225c77e1a8accb5f4423a9b4",
  "size": 787174,
- "notes": "ZAI is now ZBZAI, part of the ZyeemZia ZBZ family. Same app, same data, a new name everywhere: window, icons, Start menu, Apps and website. Everything you taught is kept. The engine stays compiled to native code and every export carries a ZyeemZia mark.",
+ "notes": "Small polish: the ZBZAI™ name now shows everywhere, including the website header. Everything you taught is kept.",
  "zip_portable": "https://zbzai.zyeemzia.com/download/ZBZAI-Engine.zip",
- "sha256_portable": "63960d31e1efc30c719cd7210075f9ac05404cabb9c04934513380ad16eaadeb",
+ "sha256_portable": "d5e92f8f07c84d7485da7a2a7bb58aec3f16428f51b0b624655e1471381bb28e",
  "copyright": "Copyright © ZyeemZia"
 }

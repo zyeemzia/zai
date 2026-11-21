@@ -30,7 +30,7 @@ a{color:var(--blue)}h1,h2,h3{font-family:Rajdhani,Inter,sans-serif;line-height:1
 .top{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;gap:14px;min-height:60px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:700 1.35rem Rajdhani,sans-serif}
-.logo img{width:34px;height:34px;border-radius:10px}.logo b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo img{width:34px;height:34px;border-radius:10px}.logo .tm{font-size:.5em;margin-left:1px;vertical-align:super;opacity:.85}.logo b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .top nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}.top nav a{color:var(--ink2);text-decoration:none;font-weight:600;font-size:.92rem;padding:7px 11px;border-radius:10px}
 .top nav a:hover{background:var(--bg2);color:var(--ink)}.top nav{align-items:center}.nav-install{display:contents}.top .zz-btn{color:var(--ink);padding:8px 13px;font-size:.85rem}@media(max-width:700px){.top .zz-btn{width:38px;height:38px;padding:0;justify-content:center}.top .zz-btn span{display:none}}
 @media(max-width:700px){.top nav a.hide{display:none}}
@@ -75,7 +75,7 @@ details{background:var(--panel);border:1px solid var(--line);border-radius:16px;
 </head>
 <body>
 <header class="top"><div class="wrap">
-  <a class="logo" href="/"><img src="/assets/icon-192.png" alt=""><span>Z<b>AI</b></span></a>
+  <a class="logo" href="/"><img src="/assets/icon-192.png" alt=""><span>ZBZ<b>AI</b><sup class="tm">™</sup></span></a>
   <nav><a href="#how" class="hide">How it works</a><a href="#studio" class="hide">Studio</a><a href="#demo">Live demo</a><a href="#download">Download</a><a href="#faq" class="hide">FAQ</a></nav>
 </div></header>
 
@@ -86,12 +86,12 @@ details{background:var(--panel);border:1px solid var(--line);border-radius:16px;
     <h1>Your own AI,<br><span>on your own network</span></h1>
     <p class="lead">Install ZBZAI from one file on a Windows PC, and every phone, tablet and computer on your local network can use that one private AI, with coworkers for office work that hand you real Word, Excel and PowerPoint files. No internet, no accounts, nothing leaves the building. Teach it your knowledge and it grows smarter every day.</p>
     <div class="cta"><a class="btn main" href="/download/ZBZAI-Setup.exe" download><i class="gi gi-download" aria-hidden="true"></i>Download for Windows</a><a class="btn" href="#demo"><i class="gi gi-play" aria-hidden="true"></i>Try the live demo</a></div>
-    <p class="tiny">Version 2.0.0 · one-file setup, 12.1 MB · Windows 10/11, nothing else to install · <a href="/download/ZBZAI-Engine.zip" download>zip for Linux and macOS</a></p>
+    <p class="tiny">Version 2.0.1 · one-file setup, 12.1 MB · Windows 10/11, nothing else to install · <a href="/download/ZBZAI-Engine.zip" download>zip for Linux and macOS</a></p>
   </div>
   <div class="term" aria-label="What the ZBZAI window shows">
     <div class="bar"><i></i><i></i><i></i><span>ZBZAI</span></div>
 <pre><span class="g">==============================================================</span>
-  ZBZAI 2.0.0  ·  ZyeemZia offline LAN AI engine  ·  Copyright © ZyeemZia
+  ZBZAI 2.0.1  ·  ZyeemZia offline LAN AI engine  ·  Copyright © ZyeemZia
 <span class="g">==============================================================</span>
   Open on this computer:   <span class="c">http://127.0.0.1:8765/</span>
   Open on the local network: <span class="c">http://192.168.1.20:8765/</span>   &lt;- share this one
@@ -169,7 +169,7 @@ details{background:var(--panel);border:1px solid var(--line);border-radius:16px;
   <div class="dl">
     <div class="card big">
       <img src="/assets/icon-512.png" alt="">
-      <h3 style="font-size:1.7rem">ZBZAI™ 2.0.0</h3>
+      <h3 style="font-size:1.7rem">ZBZAI™ 2.0.1</h3>
       <a class="btn main" href="/download/ZBZAI-Setup.exe" download><i class="gi gi-download" aria-hidden="true"></i>Download ZBZAI-Setup.exe (12.1 MB)</a>
       <p class="tiny" style="margin:0">Linux, macOS or a portable copy: <a href="/download/ZBZAI-Engine.zip" download>ZBZAI-Engine.zip (353 KB)</a>, needs Python 3.9+.</p>
       <ul class="facts">
@@ -181,7 +181,7 @@ details{background:var(--panel);border:1px solid var(--line);border-radius:16px;
         <li><b>Price</b><span>Free</span></li>
       </ul>
       <p class="tiny" style="margin:0">SHA-256 of ZBZAI-Setup.exe:</p>
-      <div class="sha">cb720ccdc74b8c3cd73a00128748e8531afc412dda44533df3c23bdab14308cb</div>
+      <div class="sha">d2a8b8377f914198bba19f7a8342d14d392063a1afd33aef29eaed3df047a05b</div>
     </div>
     <div class="card">
       <h3>Set up in five minutes</h3>
