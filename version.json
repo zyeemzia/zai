@@ -1,8 +1,10 @@
 {
- "version": "1.8.1",
+ "version": "1.9.0",
  "zip": "https://zai.zyeemzia.com/download/ZAI-Update.zip",
- "sha256": "dd1845d73f45963db03d1e90ac51ff66a112f3b6eed6e181d8b6060e91e5f379",
- "size": 343493,
- "notes": "ZAI now updates itself in two safe steps: every new file is written first and then swapped in, so an update can never stop halfway. Phones and tablets join by QR code from the Share tab, and ZAI installs as an app on any device on your network.",
+ "sha256": "e2d01cdb592e8926823bfae06cbad57ed861057da73dd56206f73b090f6bb1ff",
+ "size": 780684,
+ "notes": "ZAI's engine is now compiled to native Windows code for speed and protection, and everything ZAI exports (Word, Excel, PowerPoint, PDF, pictures, audio and video) carries a quiet ZyeemZia mark. Safe updates, phone QR codes and install-as-app included.",
+ "zip_portable": "https://zai.zyeemzia.com/download/ZAI-Engine.zip",
+ "sha256_portable": "859f5919ffe22af1cccacf331d9a649f5176f90b6f94865becad79fb46779725",
  "copyright": "Copyright © ZyeemZia"
 }
