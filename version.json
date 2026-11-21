@@ -1,10 +1,10 @@
 {
- "version": "2.0.1",
+ "version": "2.0.2",
  "zip": "https://zbzai.zyeemzia.com/download/ZAI-Update.zip",
- "sha256": "53d06d3f5e4e0e9e16c47c7cb397cc456b350c97225c77e1a8accb5f4423a9b4",
+ "sha256": "9970c5ea6db707d00495d7840008d1126224b189bed0ec80bef68900a19effee",
  "size": 787174,
- "notes": "Small polish: the ZBZAI™ name now shows everywhere, including the website header. Everything you taught is kept.",
+ "notes": "Phones and computers that install ZBZAI as an app now show the ZBZAI name. Everything you taught is kept.",
  "zip_portable": "https://zbzai.zyeemzia.com/download/ZBZAI-Engine.zip",
- "sha256_portable": "d5e92f8f07c84d7485da7a2a7bb58aec3f16428f51b0b624655e1471381bb28e",
+ "sha256_portable": "9a5fcffe62c3537053c18b2022175fbbe3c820f3440d38be9ab8518a855b27b1",
  "copyright": "Copyright © ZyeemZia"
 }
