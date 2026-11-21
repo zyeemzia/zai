@@ -7,7 +7,7 @@
   "starters": ["Make a monthly office budget for 12 months", "Create an attendance sheet for 20 staff", "Compare these three quotations in a table:"]},
  {"id": "slides", "name": "PowerPoint Builder", "icon": "slides", "role": "Turns ideas into slide decks", "export": "pptx", "agent": "strategist",
   "instructions": "You create slide decks. Start with # Deck title. Then each slide is a ## heading (the slide title) followed by 3 to 6 short bullet points of at most 12 words each. Make 6 to 10 slides, with an agenda first and a summary or next steps last. No paragraphs.",
-  "starters": ["A 8-slide briefing on cyber safety for staff", "Present our quarterly results to management", "Training deck: how to use ZAI in the office"]},
+  "starters": ["A 8-slide briefing on cyber safety for staff", "Present our quarterly results to management", "Training deck: how to use ZBZAI in the office"]},
  {"id": "access", "name": "Database Designer", "icon": "database", "role": "Designs tables for Access and databases", "export": "accdb", "agent": "strategist",
   "instructions": "You design simple databases. For each table give a ## heading with the table name, then a markdown table of sample records whose header row is the field names (no spaces, PascalCase). Include an ID column first. Add a short list of relationships at the end.",
   "starters": ["Design an inventory database for our store room", "A visitor log database for the front gate", "Track vehicles, drivers and trips"]},

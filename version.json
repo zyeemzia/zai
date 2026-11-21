@@ -1,10 +1,10 @@
 {
- "version": "1.9.0",
- "zip": "https://zai.zyeemzia.com/download/ZAI-Update.zip",
- "sha256": "e2d01cdb592e8926823bfae06cbad57ed861057da73dd56206f73b090f6bb1ff",
- "size": 780684,
- "notes": "ZAI's engine is now compiled to native Windows code for speed and protection, and everything ZAI exports (Word, Excel, PowerPoint, PDF, pictures, audio and video) carries a quiet ZyeemZia mark. Safe updates, phone QR codes and install-as-app included.",
- "zip_portable": "https://zai.zyeemzia.com/download/ZAI-Engine.zip",
- "sha256_portable": "859f5919ffe22af1cccacf331d9a649f5176f90b6f94865becad79fb46779725",
+ "version": "2.0.0",
+ "zip": "https://zbzai.zyeemzia.com/download/ZAI-Update.zip",
+ "sha256": "78d1d7339b93a7dd0492cfdf1f61031fc8857f4d83095f638e525b4cd99a0df5",
+ "size": 787174,
+ "notes": "ZAI is now ZBZAI, part of the ZyeemZia ZBZ family. Same app, same data, a new name everywhere: window, icons, Start menu, Apps and website. Everything you taught is kept. The engine stays compiled to native code and every export carries a ZyeemZia mark.",
+ "zip_portable": "https://zbzai.zyeemzia.com/download/ZBZAI-Engine.zip",
+ "sha256_portable": "63960d31e1efc30c719cd7210075f9ac05404cabb9c04934513380ad16eaadeb",
  "copyright": "Copyright © ZyeemZia"
 }

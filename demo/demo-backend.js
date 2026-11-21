@@ -1,5 +1,5 @@
-/* ZAI live demo backend · Copyright © ZyeemZia
- * The website demo runs the real ZAI web app against this in-browser copy of
+/* ZBZAI live demo backend · Copyright © ZyeemZia
+ * The website demo runs the real ZBZAI web app against this in-browser copy of
  * the engine's knowledge vault: the same chunking, the same ranked search and
  * the same vault answers as zai_server.py. What a visitor teaches is kept in
  * their own browser only. The downloadable engine adds the server, the LAN,
@@ -76,7 +76,7 @@
   const sleep = ms => new Promise(r => setTimeout(r, ms));
   window.ZAI_BACKEND = {
     async status() {
-      return { name: 'ZAI', version: (window.ZAI_VERSION || '1.0.0') + ' demo', brain: 'vault', setting: 'auto',
+      return { name: 'ZBZAI', version: (window.ZAI_VERSION || '1.0.0') + ' demo', brain: 'vault', setting: 'auto',
         local: { available: false, models: [], model: null }, cloud: { available: false, why: 'not part of the web demo', model: 'claude-opus-5-5' },
         vault: { documents: V.docs.length, passages: V.passages.length, search: 'browser' },
         online: { available: false, why: 'the downloaded engine uses ZyeemZia AI online for free', name: 'ZyeemZia AI (free)' }, update: { available: false }, copyright: 'Copyright © ZyeemZia',
@@ -123,13 +123,13 @@
     async deleteTemplate(id) { V.tpl = (V.tpl || []).filter(t => t.id !== id); save(V); return { ok: true }; },
     async checkUpdate() { return { available: false, latest: window.ZAI_VERSION, notes: '' }; },
     async applyUpdate() { throw new Error('The web demo is always the newest version. Downloaded copies update themselves from Settings.'); },
-    async settings() { throw new Error('Settings live on the host computer. Download ZAI to use them.'); },
+    async settings() { throw new Error('Settings live on the host computer. Download ZBZAI to use them.'); },
     async feedback(q, a) { addDoc('Learned answer: ' + q.slice(0, 70), `Question: ${q}\n\nAnswer: ${a.split('_(Demo')[0]}`, 'learned'); save(V); return { ok: true }; },
     async history(s) { return V.chats[s] || []; },
     async chat(message, session, on) {
       const passages = search(message, 6);
       on('meta', { brain: 'vault', model: null, sources: passages.map(p => ({ title: p.title, doc_id: p.doc_id })) });
-      const ans = vaultAnswer(message, passages) || 'I have not learned anything about that yet. Open **Knowledge**, teach me a few facts, then ask again: that is exactly how ZAI grows.';
+      const ans = vaultAnswer(message, passages) || 'I have not learned anything about that yet. Open **Knowledge**, teach me a few facts, then ask again: that is exactly how ZBZAI grows.';
       for (const part of ans.match(/\S+\s*/g) || []) { on('text', part); await sleep(12); }
       (V.chats[session] = V.chats[session] || []).push({ role: 'user', content: message }, { role: 'assistant', content: ans });
       V.chats[session] = V.chats[session].slice(-40); save(V);

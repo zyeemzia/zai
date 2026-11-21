@@ -3,21 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ZAI live demo · ZyeemZia</title>
-<meta name="robots" content="noindex">
+<title>ZBZAI™ · Offline LAN AI</title>
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="icon-192.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#070a17">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="ZAI"><meta name="application-name" content="ZAI">
-<link rel="stylesheet" href="app.css?v=6d04be8b7f">
-<link rel="stylesheet" href="icons.css?v=870b459078">
+<meta name="apple-mobile-web-app-title" content="ZBZAI"><meta name="application-name" content="ZBZAI">
+<link rel="stylesheet" href="app.css?v=b23b9a6fbf">
+<link rel="stylesheet" href="icons.css?v=488d0ecedf">
 </head>
 <body>
 <header class="top">
-  <div class="brand"><img src="icon-192.png" width="34" height="34" alt=""><div><b id="appName">ZAI</b><small>Offline LAN AI · ZyeemZia</small></div></div>
-  <button type="button" class="installbtn" id="installBtn" hidden title="Install ZAI as an app"><i class="gi gi-download" aria-hidden="true"></i><span>Install app</span></button>
+  <div class="brand"><img src="icon-192.png" width="34" height="34" alt=""><div><b id="appName">ZBZAI</b><small>Offline LAN AI · ZyeemZia</small></div></div>
+  <button type="button" class="installbtn" id="installBtn" hidden title="Install ZBZAI as an app"><i class="gi gi-download" aria-hidden="true"></i><span>Install app</span></button>
   <div class="status"><span class="brain" id="brain" title="Which brain is answering">…</span></div>
   <nav class="tabs" role="tablist">
     <button role="tab" data-tab="chat" aria-selected="true"><i class="gi gi-chat" aria-hidden="true"></i>Chat</button>
@@ -29,7 +28,7 @@
   </nav>
 </header>
 
-<div class="fakebar" id="fakebar" hidden><i class="gi gi-warn" aria-hidden="true"></i><span>This copy of ZAI has been changed and is not genuine. Get the official ZAI free from zai.zyeemzia.com.</span></div>
+<div class="fakebar" id="fakebar" hidden><i class="gi gi-warn" aria-hidden="true"></i><span>This copy of ZBZAI has been changed and is not genuine. Get the official ZBZAI free from zbzai.zyeemzia.com.</span></div>
   <div class="upbar" id="upbar" hidden><span><i class="gi gi-spark" aria-hidden="true"></i><b id="upVer"></b> is available.</span><button type="button" id="upGo">Update</button></div>
 <main>
   <!-- chat -->
@@ -37,11 +36,11 @@
     <div class="thread" id="thread" aria-live="polite">
       <div class="hello" id="hello">
         <img src="icon-192.png" width="72" height="72" alt="">
-        <h1>Ask <span id="helloName">ZAI</span> anything</h1>
+        <h1>Ask <span id="helloName">ZBZAI</span> anything</h1>
         <p>Private AI for your local network. It answers from what it has learned, and it learns more every time you teach it.</p>
         <div class="chips">
-          <button data-q="What is ZAI and how does it learn?">What is ZAI and how does it learn?</button>
-          <button data-q="How do I let others on the LAN use ZAI?">How do others on the LAN use it?</button>
+          <button data-q="What is ZBZAI and how does it learn?">What is ZBZAI and how does it learn?</button>
+          <button data-q="How do I let others on the LAN use ZBZAI?">How do others on the LAN use it?</button>
           <button data-q="Explain RAG in simple words">Explain RAG simply</button>
           <button data-q="Give me five cybersecurity rules for our office">5 security rules for our office</button>
         </div>
@@ -58,7 +57,7 @@
         <button type="button" role="menuitem" data-m="save"><i class="gi gi-download" aria-hidden="true"></i>Save this chat</button>
       </div>
       <input type="file" id="askFile" hidden accept=".txt,.md,.csv,.json,.html,.htm,.docx,.pdf,.log,.xml,.yaml,.yml,.py,.js">
-      <textarea id="input" rows="1" placeholder="Message ZAI…" aria-label="Your message"></textarea>
+      <textarea id="input" rows="1" placeholder="Message ZBZAI…" aria-label="Your message"></textarea>
       <button type="button" id="mic" class="tool" hidden aria-label="Speak your message" title="Voice typing"><i class="gi gi-mic" aria-hidden="true"></i></button>
       <button type="submit" id="send" aria-label="Send"><i class="gi gi-send" aria-hidden="true"></i></button>
     </form>
@@ -126,7 +125,7 @@
   <!-- coworkers -->
   <section class="pane" id="cowork" hidden>
     <div class="cw-head">
-      <div><h2><i class="gi gi-team" aria-hidden="true"></i>Coworkers</h2><p class="muted">AI coworkers for every kind of office work. They use what ZAI knows, work offline with a local model, and export to Word, Excel, PowerPoint, PDF, Access, audio, video and more.</p></div>
+      <div><h2><i class="gi gi-team" aria-hidden="true"></i>Coworkers</h2><p class="muted">AI coworkers for every kind of office work. They use what ZBZAI knows, work offline with a local model, and export to Word, Excel, PowerPoint, PDF, Access, audio, video and more.</p></div>
       <div class="row"><input id="cwSearch" type="search" placeholder="Find a coworker" aria-label="Find a coworker"><button type="button" class="primary" id="cwNew"><i class="gi gi-plus" aria-hidden="true"></i>New coworker</button></div>
     </div>
     <div class="card" id="cwEditor" hidden>
@@ -143,7 +142,7 @@
       </div>
       <div><span class="lbl">Icon</span><div class="cw-icons" id="cwIcons"></div></div>
       <div class="row"><button type="button" class="primary" id="cwSave"><i class="gi gi-check" aria-hidden="true"></i>Save coworker</button><button type="button" class="ghost" id="cwCancel">Cancel</button></div>
-      <p class="muted small">Coworkers are shared with everyone on your network. Teach ZAI your documents in Knowledge and every coworker uses them.</p>
+      <p class="muted small">Coworkers are shared with everyone on your network. Teach ZBZAI your documents in Knowledge and every coworker uses them.</p>
     </div>
     <div id="cwGrid"></div>
   </section>
@@ -152,10 +151,10 @@
   <section class="pane" id="know" hidden>
     <div class="cols">
       <div class="card">
-        <h2>Teach ZAI</h2>
-        <p class="muted">Paste notes, procedures, manuals or facts. ZAI uses them in every future answer.</p>
+        <h2>Teach ZBZAI</h2>
+        <p class="muted">Paste notes, procedures, manuals or facts. ZBZAI uses them in every future answer.</p>
         <input id="kTitle" placeholder="Title (optional)">
-        <textarea id="kText" rows="7" placeholder="What should ZAI learn?"></textarea>
+        <textarea id="kText" rows="7" placeholder="What should ZBZAI learn?"></textarea>
         <label class="check"><input type="checkbox" id="kFormat"> This is a document format (letter, memo…): add it to Studio's Template list</label>
         <div class="row">
           <button class="primary" id="kTeach"><i class="gi gi-brain" aria-hidden="true"></i>Teach</button>
@@ -164,7 +163,7 @@
         <p class="msg" id="kMsg" role="status"></p>
       </div>
       <div class="card">
-        <h2>What ZAI knows <small id="kCount"></small></h2>
+        <h2>What ZBZAI knows <small id="kCount"></small></h2>
         <input id="kSearch" type="search" placeholder="Search the knowledge vault…">
         <ul class="docs" id="kList"></ul>
       </div>
@@ -174,28 +173,28 @@
   <!-- share -->
   <section class="pane" id="share" hidden>
     <div class="card share-card">
-      <h2><i class="gi gi-share" aria-hidden="true"></i>Use ZAI on phones, tablets and computers</h2>
-      <p class="muted">ZAI runs on this computer. Every device on the same Wi-Fi or LAN can use it in the browser, with no internet and nothing to install.</p>
+      <h2><i class="gi gi-share" aria-hidden="true"></i>Use ZBZAI on phones, tablets and computers</h2>
+      <p class="muted">ZBZAI runs on this computer. Every device on the same Wi-Fi or LAN can use it in the browser, with no internet and nothing to install.</p>
       <ol class="steps">
-        <li>Connect the phone, tablet or computer to the <b>same Wi-Fi or network</b> as this ZAI computer.</li>
+        <li>Connect the phone, tablet or computer to the <b>same Wi-Fi or network</b> as this ZBZAI computer.</li>
         <li><b>Scan the code</b> with the phone camera, or type the address into the browser.</li>
-        <li>Optional: add ZAI to the home screen so it opens like an app (see below).</li>
+        <li>Optional: add ZBZAI to the home screen so it opens like an app (see below).</li>
       </ol>
       <div id="urls" class="qrs"></div>
-      <p class="muted small">If a device cannot connect: on the ZAI computer, set the Windows network to <b>Private</b> and allow ZAI through the firewall for private networks. The ZAI computer must be switched on with ZAI open.</p>
+      <p class="muted small">If a device cannot connect: on the ZBZAI computer, set the Windows network to <b>Private</b> and allow ZBZAI through the firewall for private networks. The ZBZAI computer must be switched on with ZBZAI open.</p>
     </div>
     <div class="card share-card" id="installCard">
-      <h2><i class="gi gi-download" aria-hidden="true"></i>Install ZAI as an app</h2>
-      <p class="muted">An icon on the home screen or desktop that opens ZAI in its own window. It works whenever the device is on this network and ZAI is running here.</p>
-      <div class="row"><button type="button" class="primary" id="installNow" hidden><i class="gi gi-download" aria-hidden="true"></i>Install ZAI on this device</button><span class="muted small" id="installState"></span></div>
+      <h2><i class="gi gi-download" aria-hidden="true"></i>Install ZBZAI as an app</h2>
+      <p class="muted">An icon on the home screen or desktop that opens ZBZAI in its own window. It works whenever the device is on this network and ZBZAI is running here.</p>
+      <div class="row"><button type="button" class="primary" id="installNow" hidden><i class="gi gi-download" aria-hidden="true"></i>Install ZBZAI on this device</button><span class="muted small" id="installState"></span></div>
       <div class="seg" role="tablist" aria-label="Your device">
         <button type="button" data-os="android" aria-pressed="false">Android</button>
         <button type="button" data-os="ios" aria-pressed="false">iPhone and iPad</button>
         <button type="button" data-os="pc" aria-pressed="false">Windows and Mac</button>
       </div>
-      <ol class="steps os-steps" data-for="android"><li>Open the ZAI address in <b>Chrome</b> (scan the code above).</li><li>Tap the <b>⋮</b> menu, then <b>Add to Home screen</b> (or <b>Install app</b>).</li><li>Tap <b>Add</b>. ZAI appears with its gold icon.</li></ol>
-      <ol class="steps os-steps" data-for="ios" hidden><li>Open the ZAI address in <b>Safari</b> (scan the code above).</li><li>Tap the <b>Share</b> button, then <b>Add to Home Screen</b>.</li><li>Tap <b>Add</b>. ZAI appears with its gold icon.</li></ol>
-      <ol class="steps os-steps" data-for="pc" hidden><li>On this ZAI computer, open ZAI in <b>Edge</b> or <b>Chrome</b> and press <b>Install ZAI on this device</b> above, or the install icon in the address bar.</li><li>On another computer, open the ZAI address, then the browser menu: <b>Apps</b> or <b>Cast, save and share</b>, then <b>Install</b> or <b>Create shortcut</b> (tick <i>Open as window</i>).</li></ol>
+      <ol class="steps os-steps" data-for="android"><li>Open the ZBZAI address in <b>Chrome</b> (scan the code above).</li><li>Tap the <b>⋮</b> menu, then <b>Add to Home screen</b> (or <b>Install app</b>).</li><li>Tap <b>Add</b>. ZBZAI appears with its gold icon.</li></ol>
+      <ol class="steps os-steps" data-for="ios" hidden><li>Open the ZBZAI address in <b>Safari</b> (scan the code above).</li><li>Tap the <b>Share</b> button, then <b>Add to Home Screen</b>.</li><li>Tap <b>Add</b>. ZBZAI appears with its gold icon.</li></ol>
+      <ol class="steps os-steps" data-for="pc" hidden><li>On this ZBZAI computer, open ZBZAI in <b>Edge</b> or <b>Chrome</b> and press <b>Install ZBZAI on this device</b> above, or the install icon in the address bar.</li><li>On another computer, open the ZBZAI address, then the browser menu: <b>Apps</b> or <b>Cast, save and share</b>, then <b>Install</b> or <b>Create shortcut</b> (tick <i>Open as window</i>).</li></ol>
     </div>
   </section>
 
@@ -203,7 +202,7 @@
   <section class="pane" id="settings" hidden>
     <div class="card">
       <h2>Settings</h2>
-      <p class="muted">Changes need the admin PIN shown in the ZAI window on the host computer.</p>
+      <p class="muted">Changes need the admin PIN shown in the ZBZAI window on the host computer.</p>
       <label>Admin PIN <input id="sPin" type="password" inputmode="numeric" autocomplete="off"></label>
       <label>Name <input id="sName"></label>
       <label>Brain
@@ -218,11 +217,11 @@
       <label>Local model (Ollama) <input id="sModel" placeholder="empty = first installed model"></label>
       <label>Ollama address <input id="sOllama" placeholder="http://127.0.0.1:11434"></label>
       <details class="adv"><summary>Optional: Claude with your own paid API key</summary>
-        <p class="muted small">Not needed: ZAI is free with its local model and ZyeemZia AI online. Claude is billed by Anthropic to your own key; run ENABLE-CLOUD.bat once while online first.</p>
+        <p class="muted small">Not needed: ZBZAI is free with its local model and ZyeemZia AI online. Claude is billed by Anthropic to your own key; run ENABLE-CLOUD.bat once while online first.</p>
         <label>Claude model <input id="sCloud" placeholder="claude-opus-5-5"></label>
         <label>Anthropic API key <input id="sKey" type="password" autocomplete="off" placeholder="leave empty to keep the current key"></label>
       </details>
-      <label class="check"><input type="checkbox" id="sOpen"> Anyone on the network can teach ZAI</label>
+      <label class="check"><input type="checkbox" id="sOpen"> Anyone on the network can teach ZBZAI</label>
       <button class="primary" id="sSave">Save settings</button>
       <p class="msg" id="sMsg" role="status"></p>
       <div class="info" id="sInfo"></div>
@@ -242,7 +241,7 @@
     </div>
     <div class="card" style="margin-top:16px" id="bCard">
       <h2>Backup and restore</h2>
-      <p class="muted">One file holds everything: knowledge, conversations, settings, your formats and pictures. ZAI also makes an automatic backup every day and keeps the last 7. Needs the admin PIN above.</p>
+      <p class="muted">One file holds everything: knowledge, conversations, settings, your formats and pictures. ZBZAI also makes an automatic backup every day and keeps the last 7. Needs the admin PIN above.</p>
       <div class="row"><button class="primary" type="button" id="bMake"><i class="gi gi-download" aria-hidden="true"></i>Back up now</button><label class="file"><i class="gi gi-up" aria-hidden="true"></i>Restore from a file<input type="file" id="bFile" accept=".zip"></label><button type="button" class="ghost" id="bList"><i class="gi gi-refresh" aria-hidden="true"></i>Show backups</button></div>
       <ul class="docs" id="bItems"></ul>
       <details class="adv"><summary>Reset options</summary>
@@ -258,19 +257,19 @@
     </div>
     <div class="card" style="margin-top:16px">
       <h2>Updates</h2>
-      <p class="muted">ZAI checks zai.zyeemzia.com for new versions whenever it is online. Updating keeps everything ZAI has learned.</p>
+      <p class="muted">ZBZAI checks zbzai.zyeemzia.com for new versions whenever it is online. Updating keeps everything ZBZAI has learned.</p>
       <p id="uState" class="info">Checking…</p>
       <div class="row"><button type="button" id="uCheck"><i class="gi gi-refresh" aria-hidden="true"></i>Check now</button><button class="primary" type="button" id="uApply" hidden><i class="gi gi-up" aria-hidden="true"></i>Update now</button></div>
       <p class="msg" id="uMsg" role="status"></p>
     </div>
   </section>
 </main>
-<footer class="foot" id="zz-copy">ZAI by ZyeemZia · <span id="ver"></span> · Copyright © ZyeemZia</footer>
-<script src="qr.js?v=a44d00df1d"></script>
-<script src="seed.js?v=5b77072934"></script>
-<script src="demo-backend.js?v=ebe133ba98"></script>
-<script src="app.js?v=ed4b110d98"></script>
-<script src="studio.js?v=9faa71743d"></script>
-<script src="coworkers.js?v=3d4a7442a5"></script>
+<footer class="foot" id="zz-copy">ZBZAI™ by ZyeemZia · <span id="ver"></span> · Copyright © ZyeemZia</footer>
+<script src="qr.js?v=7c90493623"></script>
+<script src="seed.js?v=8981d1414e"></script>
+<script src="demo-backend.js?v=a9afbfdff1"></script>
+<script src="app.js?v=c7c090f33f"></script>
+<script src="studio.js?v=61fe6c6123"></script>
+<script src="coworkers.js?v=9a00590640"></script>
 </body>
 </html>
