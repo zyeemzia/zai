@@ -1,8 +1,8 @@
 {
- "version": "1.8.0",
- "zip": "https://zai.zyeemzia.com/download/ZAI-Engine.zip",
- "sha256": "ac7ca6d73eb5e355d0ebde9bd1ae0a83d2cd3e749e9cede633b41a2b6a8604db",
- "size": 359242,
- "notes": "New: phones and tablets join in seconds. The Share tab shows a QR code to scan on the same Wi-Fi, and ZAI can be installed as an app on phones, tablets and the ZAI computer, with its gold icon and step-by-step help. The ZAI window keeps its own icon.",
+ "version": "1.8.1",
+ "zip": "https://zai.zyeemzia.com/download/ZAI-Update.zip",
+ "sha256": "dd1845d73f45963db03d1e90ac51ff66a112f3b6eed6e181d8b6060e91e5f379",
+ "size": 343493,
+ "notes": "ZAI now updates itself in two safe steps: every new file is written first and then swapped in, so an update can never stop halfway. Phones and tablets join by QR code from the Share tab, and ZAI installs as an app on any device on your network.",
  "copyright": "Copyright © ZyeemZia"
 }
