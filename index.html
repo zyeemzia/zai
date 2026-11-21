@@ -16,11 +16,8 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-<link rel="manifest" href="/manifest.webmanifest">
 <link rel="stylesheet" href="/demo/icons.css?v=870b459078">
-<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="ZAI"><meta name="application-name" content="ZAI">
-<script src="/zz-app.js?v=4" data-icon="1" data-sw="/sw.js" data-name="ZAI" defer></script>
+<script>/* this site no longer installs as an app: retire any old offline worker */if('serviceWorker' in navigator)navigator.serviceWorker.getRegistrations().then(r=>r.forEach(x=>x.unregister())).catch(()=>{});</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -79,7 +76,7 @@ details{background:var(--panel);border:1px solid var(--line);border-radius:16px;
 <body>
 <header class="top"><div class="wrap">
   <a class="logo" href="/"><img src="/assets/icon-192.png" alt=""><span>Z<b>AI</b></span></a>
-  <nav><a href="#how" class="hide">How it works</a><a href="#studio" class="hide">Studio</a><a href="#demo">Live demo</a><a href="#download">Download</a><a href="#faq" class="hide">FAQ</a><span class="nav-install" data-zz-install></span></nav>
+  <nav><a href="#how" class="hide">How it works</a><a href="#studio" class="hide">Studio</a><a href="#demo">Live demo</a><a href="#download">Download</a><a href="#faq" class="hide">FAQ</a></nav>
 </div></header>
 
 <main>
@@ -87,14 +84,14 @@ details{background:var(--panel);border:1px solid var(--line);border-radius:16px;
   <div>
     <span class="eyebrow">ZyeemZia ZAI · Free · Offline</span>
     <h1>Your own AI,<br><span>on your own network</span></h1>
-    <p class="lead">Install ZAI from one file, and every phone, tablet and computer on your local network can use one private AI, with coworkers for office work that hand you real Word, Excel and PowerPoint files. No internet, no accounts, nothing leaves the building. Teach it your knowledge and it grows smarter every day.</p>
+    <p class="lead">Install ZAI from one file on a Windows PC, and every phone, tablet and computer on your local network can use that one private AI, with coworkers for office work that hand you real Word, Excel and PowerPoint files. No internet, no accounts, nothing leaves the building. Teach it your knowledge and it grows smarter every day.</p>
     <div class="cta"><a class="btn main" href="/download/ZAI-Setup.exe" download><i class="gi gi-download" aria-hidden="true"></i>Download for Windows</a><a class="btn" href="#demo"><i class="gi gi-play" aria-hidden="true"></i>Try the live demo</a></div>
-    <p class="tiny">Version 1.7.3 · one-file setup, 11.5 MB · Windows 10/11, nothing else to install · <a href="/download/ZAI-Engine.zip" download>zip for Linux and macOS</a></p>
+    <p class="tiny">Version 1.8.0 · one-file setup, 11.7 MB · Windows 10/11, nothing else to install · <a href="/download/ZAI-Engine.zip" download>zip for Linux and macOS</a></p>
   </div>
   <div class="term" aria-label="What the ZAI window shows">
     <div class="bar"><i></i><i></i><i></i><span>ZAI</span></div>
 <pre><span class="g">==============================================================</span>
-  ZAI 1.7.3  ·  ZyeemZia offline LAN AI engine  ·  Copyright © ZyeemZia
+  ZAI 1.8.0  ·  ZyeemZia offline LAN AI engine  ·  Copyright © ZyeemZia
 <span class="g">==============================================================</span>
   Open on this computer:   <span class="c">http://127.0.0.1:8765/</span>
   Open on the local network: <span class="c">http://192.168.1.20:8765/</span>   &lt;- share this one
@@ -113,7 +110,7 @@ details{background:var(--panel);border:1px solid var(--line);border-radius:16px;
   <div class="steps">
     <div class="card"><h3>Install in a minute</h3><p>Run ZAI-Setup.exe, pick the drive and folder, done. Python is built in, no admin rights or account needed, and a clean uninstaller is added to Apps.</p></div>
     <div class="card"><h3>Open ZAI</h3><p>Click the ZAI icon on the desktop or Start menu. ZAI becomes a server, opens in your browser and shows the LAN address to share and the admin PIN.</p></div>
-    <div class="card"><h3>Everyone connects</h3><p>Phones, tablets and PCs open <code>http://your-ip:8765</code>. Same AI for the whole team, each with their own conversation.</p></div>
+    <div class="card"><h3>Everyone connects</h3><p>Phones, tablets and PCs on the same Wi-Fi scan the QR code in ZAI's Share tab, or open <code>http://your-ip:8765</code>, and can add ZAI to their home screen as an app. Each person keeps their own conversations.</p></div>
     <div class="card"><h3>Teach it, and it grows</h3><p>Paste notes, upload documents, keep good answers. Every future answer is grounded in what ZAI has learned, with sources shown.</p></div>
     <div class="card"><h3>Coworkers do the work</h3><p>Pick a Word writer, Excel analyst, PowerPoint builder or one you design, and export the result as Word, Excel, PowerPoint, PDF, Access, audio or video.</p></div>
     <div class="card"><h3>Updates and backs itself up</h3><p>New version? One tap as admin, or run the newer setup: ZAI checks the fingerprint and restarts, keeping everything. Daily automatic backups, restore in a click.</p></div>
@@ -152,7 +149,7 @@ details{background:var(--panel);border:1px solid var(--line);border-radius:16px;
 
 <section id="demo"><div class="wrap demo">
   <div>
-    <div class="sec-h" style="text-align:left;margin:0 0 16px"><h2>Try it right here</h2><p>This is the real ZAI app, running in your browser with the engine's knowledge vault.</p></div>
+    <div class="sec-h" style="text-align:left;margin:0 0 16px"><h2>Try it right here</h2><p>This is the real ZAI app, running in your browser with the engine's knowledge vault. This website is the demo and download only; the real ZAI runs on your own PC.</p></div>
     <ul>
       <li><i class="gi gi-chat" aria-hidden="true"></i><b>Ask</b> about ZAI, AI ideas, networking or cybersecurity: the starter knowledge.</li>
       <li><i class="gi gi-book" aria-hidden="true"></i><b>Teach it</b> in Knowledge: paste a few facts about your team, then ask about them.</li>
@@ -172,18 +169,19 @@ details{background:var(--panel);border:1px solid var(--line);border-radius:16px;
   <div class="dl">
     <div class="card big">
       <img src="/assets/icon-512.png" alt="">
-      <h3 style="font-size:1.7rem">ZAI Engine 1.7.3</h3>
-      <a class="btn main" href="/download/ZAI-Setup.exe" download><i class="gi gi-download" aria-hidden="true"></i>Download ZAI-Setup.exe (11.5 MB)</a>
-      <p class="tiny" style="margin:0">Linux, macOS or a portable copy: <a href="/download/ZAI-Engine.zip" download>ZAI-Engine.zip (167 KB)</a>, needs Python 3.9+.</p>
+      <h3 style="font-size:1.7rem">ZAI Engine 1.8.0</h3>
+      <a class="btn main" href="/download/ZAI-Setup.exe" download><i class="gi gi-download" aria-hidden="true"></i>Download ZAI-Setup.exe (11.7 MB)</a>
+      <p class="tiny" style="margin:0">Linux, macOS or a portable copy: <a href="/download/ZAI-Engine.zip" download>ZAI-Engine.zip (351 KB)</a>, needs Python 3.9+.</p>
       <ul class="facts">
-        <li><b>Runs on</b><span>Windows 10/11 · Linux · macOS</span></li>
+        <li><b>ZAI computer</b><span>Windows 10/11 PC (also Linux, macOS)</span></li>
+        <li><b>Other devices</b><span>Any phone, tablet or PC browser on the same network</span></li>
         <li><b>Needs</b><span>Nothing else on Windows (Python built in)</span></li>
         <li><b>Local model</b><span>Optional, via free Ollama</span></li>
         <li><b>Network</b><span>Any LAN or Wi-Fi, no internet</span></li>
         <li><b>Price</b><span>Free</span></li>
       </ul>
       <p class="tiny" style="margin:0">SHA-256 of ZAI-Setup.exe:</p>
-      <div class="sha">ea4bc1040369acff4728fac25325ebbaf5d4eb033b87835652bed95c25383558</div>
+      <div class="sha">7db4a8f9aa32072f13839c8cf2d6a6161750f3e67648dbc408f7406c9eca733c</div>
     </div>
     <div class="card">
       <h3>Set up in five minutes</h3>
@@ -191,7 +189,7 @@ details{background:var(--panel);border:1px solid var(--line);border-radius:16px;
         <li>Run <b>ZAI-Setup.exe</b> on the computer that will be the server and choose the drive and folder. If Windows says it protected your PC, choose <i>More info</i> then <i>Run anyway</i>. No admin rights needed.</li>
         <li>ZAI starts and opens in your browser. Next time, use the <b>ZAI</b> icon on the desktop or in the Start menu.</li>
         <li>When Windows asks about the firewall, allow <b>Private networks</b>.</li>
-        <li>Share the network address shown in the window. Everyone on the LAN can now use ZAI.</li>
+        <li>Open <b>Share</b> in ZAI: phones and tablets on the same Wi-Fi scan the QR code, and can add ZAI to their home screen as an app.</li>
         <li>For a real offline AI model, run <b>GET-LOCAL-MODEL.bat</b> once while online. ZAI picks it up automatically.</li>
       </ol>
       <p class="tiny">Online, ZAI also answers with ZyeemZia AI for free. PDFs work out of the box. <b>ENABLE-CLOUD.bat</b> adds Claude for anyone with their own paid key. ZAI updates itself from Settings. Running a newer ZAI-Setup.exe also updates an installed ZAI and keeps everything it learned; setup even brings over what an earlier unzipped ZAI learned. Backups and restore are in Settings.</p>
@@ -201,6 +199,7 @@ details{background:var(--panel);border:1px solid var(--line);border-radius:16px;
 
 <section id="faq"><div class="wrap" style="max-width:820px">
   <div class="sec-h"><h2>Questions</h2></div>
+  <details><summary>Can ZAI run on my phone?</summary><p>ZAI itself runs on one Windows PC (or a Linux or Mac computer): that computer is the server, with the AI model and everything ZAI learns. Phones and tablets do not run ZAI on their own; they use it over your local network. Connect them to the same Wi-Fi, scan the QR code in ZAI's <b>Share</b> tab, and add ZAI to the home screen if you like: it then opens like an app, with no internet. ZAI works on phones whenever the ZAI computer is on and ZAI is open.</p></details>
   <details><summary>Is ZAI really free? What about Claude?</summary><p>Yes, ZAI is free, and so are all three of its brains: the local model, ZyeemZia AI online, and the knowledge vault. Claude is not free: it is billed by Anthropic per use. ZAI keeps it as an optional extra for anyone who wants to add their own Claude API key in Settings; nobody needs it.</p></details>
   <details><summary>Can ZAI make audio, videos or music?</summary><p>Yes, partly. On Windows ZAI turns any answer into spoken audio (WAV, or MP3 with the free ffmpeg tool) using the built-in voices, and the Video Explainer coworker makes narrated slide videos (MP4, with ffmpeg). Studio writes songs with lyrics, chords, key and tempo. Generating sung music and filmed video needs much heavier AI models; those will arrive through ZAI's automatic updates when they run well on ordinary computers.</p></details>
   <details><summary>Which files can ZAI make?</summary><p>Every answer and Studio document exports to Word (.docx), Excel (.xlsx), PowerPoint (.pptx), PDF, CSV, a SQLite database, a web page, Markdown, text and JSON, all offline. On Windows it also records audio (WAV) with the built-in voices and makes Access databases when Microsoft Office is installed. With the free ffmpeg tool it adds MP3 audio and narrated MP4 videos.</p></details>

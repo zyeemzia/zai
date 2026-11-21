@@ -198,3 +198,23 @@ body.wide main { max-width: 1320px; }
 .xmenu button:hover:not([disabled]), .xmenu button:focus-visible { background: var(--panel2); }
 .xmenu button[disabled] { opacity: .45; cursor: not-allowed; }
 .xmenu small { margin-left: auto; color: var(--gold); font-weight: 700; }
+
+/* ---------- 1.8: phones, QR codes, install ---------- */
+#share { align-items: stretch; gap: 16px; }
+.share-card h2 { display: flex; align-items: center; gap: 8px; }
+.steps { margin: 4px 0; padding-left: 22px; display: grid; gap: 6px; color: var(--ink2); }
+.steps b { color: var(--ink); }
+.qrs { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin: 6px 0; }
+.qrs figure { margin: 0; display: grid; justify-items: center; gap: 8px; padding: 14px; border-radius: 16px; background: var(--panel2); border: 1px solid var(--line); }
+.qrs canvas { width: 200px; height: 200px; image-rendering: pixelated; border-radius: 10px; box-shadow: 0 0 0 4px #fff; }
+.qrs figcaption { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: center; }
+.qrs a { font-family: ui-monospace, Consolas, monospace; font-weight: 700; color: var(--accent); word-break: break-all; }
+.qrs .ghost { padding: 6px 10px; font-size: .85rem; }
+.share-card .seg { margin: 4px 0; }
+.installbtn { display: inline-flex; align-items: center; gap: 6px; border: 1px solid color-mix(in srgb, var(--gold) 55%, transparent); background: linear-gradient(135deg, rgba(212, 175, 85, .16), rgba(96, 165, 250, .12)); color: var(--ink); border-radius: 999px; padding: 6px 12px; font-weight: 700; font-size: .82rem; cursor: pointer; }
+.installbtn .gi { margin: 0; }
+@media (max-width: 560px) { .installbtn span { display: none; } .installbtn { padding: 7px 9px; } }
+.more-urls { width: 100%; text-align: center; color: var(--ink3); font-size: .85rem; }
+.more-urls summary { cursor: pointer; padding: 4px; }
+.small-urls figure { padding: 8px 12px; }
+.small-urls a { font-size: .85rem; }

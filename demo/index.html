@@ -7,12 +7,17 @@
 <meta name="robots" content="noindex">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="icon-192.png">
-<link rel="stylesheet" href="app.css?v=f77e4bfa14">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#070a17">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ZAI"><meta name="application-name" content="ZAI">
+<link rel="stylesheet" href="app.css?v=6d04be8b7f">
 <link rel="stylesheet" href="icons.css?v=870b459078">
 </head>
 <body>
 <header class="top">
   <div class="brand"><img src="icon-192.png" width="34" height="34" alt=""><div><b id="appName">ZAI</b><small>Offline LAN AI · ZyeemZia</small></div></div>
+  <button type="button" class="installbtn" id="installBtn" hidden title="Install ZAI as an app"><i class="gi gi-download" aria-hidden="true"></i><span>Install app</span></button>
   <div class="status"><span class="brain" id="brain" title="Which brain is answering">…</span></div>
   <nav class="tabs" role="tablist">
     <button role="tab" data-tab="chat" aria-selected="true"><i class="gi gi-chat" aria-hidden="true"></i>Chat</button>
@@ -168,11 +173,29 @@
 
   <!-- share -->
   <section class="pane" id="share" hidden>
-    <div class="card center">
-      <h2>Use ZAI on any device on this network</h2>
-      <p class="muted">Open one of these addresses on a phone, tablet or computer connected to the same Wi-Fi or LAN. No internet needed.</p>
-      <div id="urls" class="urls"></div>
-      <p class="muted small">If a device cannot connect: on the ZAI computer, set the Windows network to <b>Private</b> and allow Python through the firewall for private networks.</p>
+    <div class="card share-card">
+      <h2><i class="gi gi-share" aria-hidden="true"></i>Use ZAI on phones, tablets and computers</h2>
+      <p class="muted">ZAI runs on this computer. Every device on the same Wi-Fi or LAN can use it in the browser, with no internet and nothing to install.</p>
+      <ol class="steps">
+        <li>Connect the phone, tablet or computer to the <b>same Wi-Fi or network</b> as this ZAI computer.</li>
+        <li><b>Scan the code</b> with the phone camera, or type the address into the browser.</li>
+        <li>Optional: add ZAI to the home screen so it opens like an app (see below).</li>
+      </ol>
+      <div id="urls" class="qrs"></div>
+      <p class="muted small">If a device cannot connect: on the ZAI computer, set the Windows network to <b>Private</b> and allow ZAI through the firewall for private networks. The ZAI computer must be switched on with ZAI open.</p>
+    </div>
+    <div class="card share-card" id="installCard">
+      <h2><i class="gi gi-download" aria-hidden="true"></i>Install ZAI as an app</h2>
+      <p class="muted">An icon on the home screen or desktop that opens ZAI in its own window. It works whenever the device is on this network and ZAI is running here.</p>
+      <div class="row"><button type="button" class="primary" id="installNow" hidden><i class="gi gi-download" aria-hidden="true"></i>Install ZAI on this device</button><span class="muted small" id="installState"></span></div>
+      <div class="seg" role="tablist" aria-label="Your device">
+        <button type="button" data-os="android" aria-pressed="false">Android</button>
+        <button type="button" data-os="ios" aria-pressed="false">iPhone and iPad</button>
+        <button type="button" data-os="pc" aria-pressed="false">Windows and Mac</button>
+      </div>
+      <ol class="steps os-steps" data-for="android"><li>Open the ZAI address in <b>Chrome</b> (scan the code above).</li><li>Tap the <b>⋮</b> menu, then <b>Add to Home screen</b> (or <b>Install app</b>).</li><li>Tap <b>Add</b>. ZAI appears with its gold icon.</li></ol>
+      <ol class="steps os-steps" data-for="ios" hidden><li>Open the ZAI address in <b>Safari</b> (scan the code above).</li><li>Tap the <b>Share</b> button, then <b>Add to Home Screen</b>.</li><li>Tap <b>Add</b>. ZAI appears with its gold icon.</li></ol>
+      <ol class="steps os-steps" data-for="pc" hidden><li>On this ZAI computer, open ZAI in <b>Edge</b> or <b>Chrome</b> and press <b>Install ZAI on this device</b> above, or the install icon in the address bar.</li><li>On another computer, open the ZAI address, then the browser menu: <b>Apps</b> or <b>Cast, save and share</b>, then <b>Install</b> or <b>Create shortcut</b> (tick <i>Open as window</i>).</li></ol>
     </div>
   </section>
 
@@ -243,9 +266,10 @@
   </section>
 </main>
 <footer class="foot" id="zz-copy">ZAI by ZyeemZia · <span id="ver"></span> · Copyright © ZyeemZia</footer>
-<script src="seed.js?v=e400398931"></script>
+<script src="qr.js?v=a44d00df1d"></script>
+<script src="seed.js?v=213b817841"></script>
 <script src="demo-backend.js?v=ebe133ba98"></script>
-<script src="app.js?v=d4d5ca774e"></script>
+<script src="app.js?v=ed4b110d98"></script>
 <script src="studio.js?v=9faa71743d"></script>
 <script src="coworkers.js?v=3d4a7442a5"></script>
 </body>
