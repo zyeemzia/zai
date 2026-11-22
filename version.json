@@ -1,10 +1,15 @@
 {
- "version": "2.0.2",
+ "version": "2.0.3",
+ "notes": "ZBZAI 2.0.3: attach up to 10 files of any kind (Word, Excel, PowerPoint, PDF, OpenDocument, RTF, code, pictures, sound, video) and ask across them, then save the edited file in its own format. New Studio Video: cut, join, music, captions, logo, shapes for Reels and YouTube, speed, convert, compress, and make videos from pictures with narration. Songs now play as real music, with a music video from your photos; pictures can start from your own photo. Spelling is fixed as you type, past chats can be searched and renamed, answers can be short or detailed, and ChatGPT, Gemini, DeepSeek, Groq, Mistral, Grok and OpenRouter can be added with your own keys. ZBZAI moves to its own ZBZAI folder and names. Everything you taught is kept.",
+ "zip_zbzai": "https://zbzai.zyeemzia.com/download/ZBZAI-Update.zip",
+ "sha256_zbzai": "19a75e22396e5c7ed7154293a59e1cd9a5b79a8bacb02f825944760fc29ed0a2",
+ "size_zbzai": 1106089,
+ "zip_zbzai_portable": "https://zbzai.zyeemzia.com/download/ZBZAI-Engine.zip",
+ "sha256_zbzai_portable": "c8c5934cd8a338241dbe7cf2e915db9d6b032797ad7c64d46c434bb17c67f2eb",
  "zip": "https://zbzai.zyeemzia.com/download/ZAI-Update.zip",
- "sha256": "9970c5ea6db707d00495d7840008d1126224b189bed0ec80bef68900a19effee",
- "size": 787174,
- "notes": "Phones and computers that install ZBZAI as an app now show the ZBZAI name. Everything you taught is kept.",
- "zip_portable": "https://zbzai.zyeemzia.com/download/ZBZAI-Engine.zip",
- "sha256_portable": "9a5fcffe62c3537053c18b2022175fbbe3c820f3440d38be9ab8518a855b27b1",
+ "sha256": "14b023feac87a7983e928c56310d5de80d9f7ad68658e8cb96c3e2720e90d75e",
+ "size": 1106484,
+ "zip_portable": "https://zbzai.zyeemzia.com/download/ZAI-Portable-Update.zip",
+ "sha256_portable": "8f149b28c6ce113a6b2f6bcff2c4859db94a73051258832c0f7974b45f2b6017",
  "copyright": "Copyright © ZyeemZia"
 }

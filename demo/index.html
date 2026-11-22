@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#070a17">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="ZBZAI"><meta name="application-name" content="ZBZAI">
-<link rel="stylesheet" href="app.css?v=b23b9a6fbf">
+<link rel="stylesheet" href="app.css?v=f960241277">
 <link rel="stylesheet" href="icons.css?v=488d0ecedf">
 </head>
 <body>
@@ -53,11 +53,14 @@
       <div class="pmenu" id="pmenu" role="menu" hidden>
         <button type="button" role="menuitem" data-m="new"><i class="gi gi-chat" aria-hidden="true"></i>New chat</button>
         <button type="button" role="menuitem" data-m="past"><i class="gi gi-history" aria-hidden="true"></i>Past chats</button>
-        <button type="button" role="menuitem" data-m="file"><i class="gi gi-clip" aria-hidden="true"></i>Ask about a file</button>
+        <button type="button" role="menuitem" data-m="file"><i class="gi gi-clip" aria-hidden="true"></i>Add files (Word, Excel, PowerPoint, PDF and more)</button>
         <button type="button" role="menuitem" data-m="save"><i class="gi gi-download" aria-hidden="true"></i>Save this chat</button>
+        <label class="mrow"><i class="gi gi-pen" aria-hidden="true"></i>Answers <select id="style" aria-label="Answer length"><option value="short">Short</option><option value="balanced">Balanced</option><option value="detailed">Detailed</option></select></label>
+        <label class="mrow check"><input type="checkbox" id="acOn"> Fix spelling as I type</label>
+        <button type="button" role="menuitem" data-m="keys"><i class="gi gi-spark" aria-hidden="true"></i>Keyboard shortcuts</button>
       </div>
-      <input type="file" id="askFile" hidden accept=".txt,.md,.csv,.json,.html,.htm,.docx,.pdf,.log,.xml,.yaml,.yml,.py,.js">
-      <textarea id="input" rows="1" placeholder="Message ZBZAI…" aria-label="Your message"></textarea>
+      <input type="file" id="askFile" hidden multiple accept=".txt,.md,.csv,.tsv,.json,.html,.htm,.xml,.yaml,.yml,.log,.rtf,.docx,.doc,.odt,.xlsx,.xls,.ods,.pptx,.ppt,.odp,.pdf,.epub,.py,.js,.ts,.java,.c,.cpp,.cs,.go,.php,.sql,.css,.srt,.vtt,image/*,audio/*,video/*">
+      <textarea id="input" rows="1" placeholder="Message ZBZAI…" aria-label="Your message" spellcheck="true" autocorrect="on" autocapitalize="sentences"></textarea>
       <button type="button" id="mic" class="tool" hidden aria-label="Speak your message" title="Voice typing"><i class="gi gi-mic" aria-hidden="true"></i></button>
       <button type="submit" id="send" aria-label="Send"><i class="gi gi-send" aria-hidden="true"></i></button>
     </form>
@@ -69,6 +72,7 @@
       <button type="button" data-st="doc" aria-pressed="true"><i class="gi gi-doc" aria-hidden="true"></i>Documents</button>
       <button type="button" data-st="img" aria-pressed="false"><i class="gi gi-image" aria-hidden="true"></i>Pictures</button>
       <button type="button" data-st="song" aria-pressed="false"><i class="gi gi-music" aria-hidden="true"></i>Songs</button>
+      <button type="button" data-st="video" aria-pressed="false"><i class="gi gi-video" aria-hidden="true"></i>Video</button>
     </div>
     <div class="st-pane" id="st-doc">
       <div class="cols">
@@ -92,6 +96,16 @@
           <h2>Create a picture</h2>
           <textarea id="iPrompt" rows="4" placeholder="Describe it: a modern office poster about cyber safety, blue and gold, clean design"></textarea>
           <div class="chips left" id="iStyles"></div>
+          <details class="adv" id="iFrom"><summary>Start from your own picture (optional)</summary>
+            <label class="file drop" id="iDrop"><i class="gi gi-image" aria-hidden="true"></i><span id="iFileName">Choose or drop a photo</span><input type="file" id="iFile" accept="image/*"></label>
+            <label>Make it <select id="iLook">
+              <option value="ai">Redrawn by AI from my words (needs a local Stable Diffusion)</option>
+              <option value="cartoon">Cartoon</option><option value="sketch">Pencil sketch</option><option value="vintage">Vintage photo</option>
+              <option value="bw">Black and white</option><option value="vivid" selected>Bright and vivid</option><option value="warm">Warm</option>
+              <option value="cool">Cool</option><option value="soft">Soft glow</option><option value="poster">Poster with my words on it</option>
+            </select></label>
+            <p class="muted small">Styles work offline on the ZBZAI computer. Your words become the poster title.</p>
+          </details>
           <button class="primary" type="button" id="iGo"><i class="gi gi-studio" aria-hidden="true"></i>Create picture</button>
           <p class="msg" id="iMsg" role="status"></p>
           <p class="muted small" id="iHow"></p>
@@ -99,6 +113,57 @@
         <div class="card">
           <h2>Gallery <small>shared on this network</small></h2>
           <div class="gallery" id="iGallery"></div>
+        </div>
+      </div>
+    </div>
+    <div class="st-pane" id="st-video" hidden>
+      <div class="cols">
+        <div class="card">
+          <div class="seg small" role="tablist" aria-label="Video">
+            <button type="button" data-vm="edit" aria-pressed="true">Edit a video</button>
+            <button type="button" data-vm="make" aria-pressed="false">Make a video</button>
+          </div>
+          <div id="vEdit">
+            <label class="file drop" id="vDrop"><i class="gi gi-clip" aria-hidden="true"></i><span>Choose or drop videos, music or pictures</span><input type="file" id="vFiles" multiple accept="video/*,audio/*,image/*"></label>
+            <ol class="vlist" id="vList"></ol>
+            <label>What to do <select id="vOp">
+              <option value="trim">Cut: keep only a part</option>
+              <option value="merge">Join clips into one video</option>
+              <option value="music">Add background music</option>
+              <option value="replace">Replace the sound</option>
+              <option value="mute">Remove the sound</option>
+              <option value="title">Add a title</option>
+              <option value="captions">Add captions (subtitles)</option>
+              <option value="resize">Change shape (YouTube, Reels/Shorts, square)</option>
+              <option value="speed">Speed up or slow down</option>
+              <option value="rotate">Rotate or flip</option>
+              <option value="convert">Convert (MP4, WebM, GIF, MP3, WAV)</option>
+              <option value="logo">Add a logo or watermark</option>
+              <option value="compress">Make the file smaller</option>
+            </select></label>
+            <div id="vOpts" class="fields"></div>
+            <button class="primary" type="button" id="vGo"><i class="gi gi-spark" aria-hidden="true"></i>Make it</button>
+          </div>
+          <div id="vMake" hidden>
+            <label>Title <input id="mTitle" placeholder="Our office safety week"></label>
+            <label>Narration (ZBZAI reads it aloud) <textarea id="mScript" rows="5" placeholder="Write what the video should say. Leave empty for music only. With no pictures, ZBZAI makes narrated slides from this text."></textarea></label>
+            <button type="button" class="ghost" id="mAi"><i class="gi gi-spark" aria-hidden="true"></i>Write the narration with AI</button>
+            <label class="file drop" id="mDrop"><i class="gi gi-image" aria-hidden="true"></i><span>Add pictures, clips and a music file (optional)</span><input type="file" id="mFiles" multiple accept="image/*,video/*,audio/*"></label>
+            <ol class="vlist" id="mList"></ol>
+            <div class="opts">
+              <label>Shape <select id="mShape"><option value="16:9">16:9 YouTube, TV</option><option value="9:16">9:16 Reels, Shorts, TikTok</option><option value="1:1">1:1 Square</option></select></label>
+              <label>Seconds per picture <input id="mSec" type="number" min="1" max="60" value="4"></label>
+              <label>Format <select id="mFmt"><option value="mp4">MP4</option><option value="webm">WebM</option></select></label>
+            </div>
+            <label class="check"><input type="checkbox" id="mMotion" checked> Slow zoom on pictures</label>
+            <button class="primary" type="button" id="mGo"><i class="gi gi-studio" aria-hidden="true"></i>Make the video</button>
+          </div>
+          <p class="msg" id="vMsg" role="status"></p>
+          <p class="muted small" id="vHow">Runs on the ZBZAI computer with the free ffmpeg tool. Files stay on your network.</p>
+        </div>
+        <div class="card">
+          <h2>Result <small id="vState"></small></h2>
+          <div class="vout" id="vOut"><p class="muted">Your video appears here to watch and download.</p></div>
         </div>
       </div>
     </div>
@@ -111,12 +176,20 @@
           <label>Mood <select id="sMood"><option>Uplifting</option><option>Romantic</option><option>Sad</option><option>Patriotic</option><option>Peaceful</option><option>Energetic</option><option>For children</option></select></label>
           <label>Style <select id="sStyle"><option>Folk (Baul / Bhatiyali feel)</option><option>Pop</option><option>Rock</option><option>Acoustic ballad</option><option>Anthem</option><option>Nasheed (voice only)</option><option>Lullaby</option></select></label>
           <button class="primary" type="button" id="sGo"><i class="gi gi-music" aria-hidden="true"></i>Write the song</button>
-          <p class="muted small">Writes original lyrics with chords, key, tempo and strumming. Audio is not generated.</p>
+          <p class="muted small">Writes original lyrics with chords, key, tempo and strumming. Then ZBZAI can play it: a real backing track made from the chords, and a music video.</p>
         </div>
         <div class="card">
           <h2>Your song <small id="sState"></small></h2>
           <div class="doc song" id="sOut" contenteditable="true" aria-label="Song, editable"></div>
           <div class="row"><button type="button" class="ghost" id="sCopy"><i class="gi gi-copy" aria-hidden="true"></i>Copy</button><button type="button" class="ghost" id="sTxt"><i class="gi gi-download" aria-hidden="true"></i>Text</button><button type="button" class="ghost" id="sPrint"><i class="gi gi-print" aria-hidden="true"></i>Print</button></div>
+          <h3 class="sub"><i class="gi gi-music" aria-hidden="true"></i>Hear it and see it</h3>
+          <label class="check"><input type="checkbox" id="sVoice"> Read the words over the music (ZBZAI speaks them; it cannot sing yet)</label>
+          <div class="row"><button type="button" class="primary" id="sMusic"><i class="gi gi-play" aria-hidden="true"></i>Make the music</button></div>
+          <label class="file drop" id="sDrop"><i class="gi gi-video" aria-hidden="true"></i><span>Add pictures or clips for a music video</span><input type="file" id="sFiles" multiple accept="image/*,video/*"></label>
+          <ol class="vlist" id="sList"></ol>
+          <div class="row"><button type="button" class="ghost" id="sVideo"><i class="gi gi-video" aria-hidden="true"></i>Make the music video</button></div>
+          <p class="msg" id="sMsg" role="status"></p>
+          <div class="vout" id="sMedia"></div>
         </div>
       </div>
     </div>
@@ -212,6 +285,13 @@
           <option value="online">ZyeemZia AI online (free, needs internet)</option>
           <option value="vault">Knowledge vault only (no model, free)</option>
           <option value="cloud">Claude (optional: your own paid API key)</option>
+          <option value="openai">ChatGPT (optional: your own OpenAI key)</option>
+          <option value="gemini">Google Gemini (optional: your own key, free tier available)</option>
+          <option value="deepseek">DeepSeek (optional: your own key)</option>
+          <option value="groq">Groq (optional: your own key, free tier available)</option>
+          <option value="mistral">Mistral (optional: your own key)</option>
+          <option value="xai">Grok by xAI (optional: your own key)</option>
+          <option value="openrouter">OpenRouter: many models with one key (optional)</option>
         </select>
       </label>
       <label>Local model (Ollama) <input id="sModel" placeholder="empty = first installed model"></label>
@@ -220,6 +300,10 @@
         <p class="muted small">Not needed: ZBZAI is free with its local model and ZyeemZia AI online. Claude is billed by Anthropic to your own key; run ENABLE-CLOUD.bat once while online first.</p>
         <label>Claude model <input id="sCloud" placeholder="claude-opus-5-5"></label>
         <label>Anthropic API key <input id="sKey" type="password" autocomplete="off" placeholder="leave empty to keep the current key"></label>
+      </details>
+      <details class="adv"><summary>Optional: ChatGPT, Gemini, DeepSeek, Groq, Mistral, Grok, OpenRouter with your own keys</summary>
+        <p class="muted small">Not needed: ZBZAI is free without them. Each service bills or limits your own key; Gemini and Groq have free tiers. Keys stay on the ZBZAI computer. Pick the brain above, paste its key, save. Type a dash (-) to remove a saved key.</p>
+        <div id="sProv" class="prov"></div>
       </details>
       <label class="check"><input type="checkbox" id="sOpen"> Anyone on the network can teach ZBZAI</label>
       <button class="primary" id="sSave">Save settings</button>
@@ -265,11 +349,12 @@
   </section>
 </main>
 <footer class="foot" id="zz-copy">ZBZAI™ by ZyeemZia · <span id="ver"></span> · Copyright © ZyeemZia</footer>
-<script src="qr.js?v=7c90493623"></script>
-<script src="seed.js?v=2440719a8f"></script>
-<script src="demo-backend.js?v=a9afbfdff1"></script>
-<script src="app.js?v=c7c090f33f"></script>
-<script src="studio.js?v=61fe6c6123"></script>
-<script src="coworkers.js?v=9a00590640"></script>
+<script src="autocorrect.js?v=37bc51e766"></script>
+<script src="qr.js?v=4e6d37b618"></script>
+<script src="seed.js?v=86e8f03f28"></script>
+<script src="demo-backend.js?v=3ed8ee0a04"></script>
+<script src="app.js?v=fc3b019717"></script>
+<script src="studio.js?v=4d157404df"></script>
+<script src="coworkers.js?v=cc0aeccc8f"></script>
 </body>
 </html>

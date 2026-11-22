@@ -1,14 +1,14 @@
 /* ZBZAI live demo backend · Copyright © ZyeemZia
  * The website demo runs the real ZBZAI web app against this in-browser copy of
  * the engine's knowledge vault: the same chunking, the same ranked search and
- * the same vault answers as zai_server.py. What a visitor teaches is kept in
+ * the same vault answers as zbzai_server.py. What a visitor teaches is kept in
  * their own browser only. The downloadable engine adds the server, the LAN,
  * and a real AI model. */
 (() => {
   'use strict';
-  const SEED = window.ZAI_SEED || [];
+  const SEED = window.ZBZAI_SEED || [];
   const STOP = new Set('a an and are as at be but by can do does for from how i if in is it its me my of on or so that the this to was what when where which who why will with you your'.split(' '));
-  const KEY = 'zai-demo-vault-v1';
+  const KEY = 'zbzai-demo-vault-v1';
   const load = () => { try { return JSON.parse(localStorage.getItem(KEY) || 'null'); } catch { return null; } };
   const save = v => { try { localStorage.setItem(KEY, JSON.stringify(v)); } catch { /* private mode: in-memory only */ } };
 
@@ -74,9 +74,9 @@
   }
 
   const sleep = ms => new Promise(r => setTimeout(r, ms));
-  window.ZAI_BACKEND = {
+  window.ZBZAI_BACKEND = {
     async status() {
-      return { name: 'ZBZAI', version: (window.ZAI_VERSION || '1.0.0') + ' demo', brain: 'vault', setting: 'auto',
+      return { name: 'ZBZAI', version: (window.ZBZAI_VERSION || '1.0.0') + ' demo', brain: 'vault', setting: 'auto',
         local: { available: false, models: [], model: null }, cloud: { available: false, why: 'not part of the web demo', model: 'claude-opus-5-5' },
         vault: { documents: V.docs.length, passages: V.passages.length, search: 'browser' },
         online: { available: false, why: 'the downloaded engine uses ZyeemZia AI online for free', name: 'ZyeemZia AI (free)' }, update: { available: false }, copyright: 'Copyright © ZyeemZia',
@@ -121,7 +121,7 @@
       V.tpl.unshift(it); addDoc('Format: ' + it.name, sample, 'format'); save(V); return it;
     },
     async deleteTemplate(id) { V.tpl = (V.tpl || []).filter(t => t.id !== id); save(V); return { ok: true }; },
-    async checkUpdate() { return { available: false, latest: window.ZAI_VERSION, notes: '' }; },
+    async checkUpdate() { return { available: false, latest: window.ZBZAI_VERSION, notes: '' }; },
     async applyUpdate() { throw new Error('The web demo is always the newest version. Downloaded copies update themselves from Settings.'); },
     async settings() { throw new Error('Settings live on the host computer. Download ZBZAI to use them.'); },
     async feedback(q, a) { addDoc('Learned answer: ' + q.slice(0, 70), `Question: ${q}\n\nAnswer: ${a.split('_(Demo')[0]}`, 'learned'); save(V); return { ok: true }; },
