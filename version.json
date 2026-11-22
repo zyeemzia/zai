@@ -1,15 +1,15 @@
 {
- "version": "2.0.4",
- "notes": "ZBZAI 2.0.4: attached files and pictures now reach ZyeemZia AI in full (pictures are understood), and its flagship agent answers by default. When the free allowance is used up, another brain you have (a local model or one with your own key) answers instead. Claude now sits in the same list as ChatGPT, Gemini and the others, and works with just your key. Everything you taught is kept.",
+ "version": "2.0.5",
+ "notes": "ZBZAI 2.0.5: ZBZAI now keeps an offline copy of the ZyeemZia AI knowledge library, the same public facts every ZyeemZia AI agent uses, so answers on your network know them even with no internet, with sources. It refreshes by itself when online, stays apart from what you taught, and can be switched off in Settings. Everything you taught is kept.",
  "zip_zbzai": "https://zbzai.zyeemzia.com/download/ZBZAI-Update.zip",
- "sha256_zbzai": "295ce2f928325dade5c04ba77fce016f7f93c89398b99c414f2ecda9967b00cd",
- "size_zbzai": 1123178,
+ "sha256_zbzai": "5d296d24eecf0594b1e19b0e2ff5402a2eff53fc13bbfa459f61a6a1a14308c3",
+ "size_zbzai": 1139864,
  "zip_zbzai_portable": "https://zbzai.zyeemzia.com/download/ZBZAI-Engine.zip",
- "sha256_zbzai_portable": "a3e6bf0aff56793fa87ed160d97b922c55215493195f3768888190a1575e5d75",
+ "sha256_zbzai_portable": "6d7c8bca88480a0a4666aa5420baec9256323dec30a4ed614c99add3b5d42dac",
  "zip": "https://zbzai.zyeemzia.com/download/ZAI-Update.zip",
- "sha256": "1f260aafc72a69802b0dd404ae60510d3aa4a6cca9a8cf874b65bd09b3efa6a1",
- "size": 1123573,
+ "sha256": "9fe53231e5504dfbcd5dd017851415b9ad94a87f6b13e582c8f75b26277e5fb5",
+ "size": 1140259,
  "zip_portable": "https://zbzai.zyeemzia.com/download/ZAI-Portable-Update.zip",
- "sha256_portable": "c36e4fae66e4a00caf3863c9bc855991b2fbe0f355240c25118a4a558b890c8d",
+ "sha256_portable": "c7f44210c4188b9dd65d107e85ae980c3264c739afa21be9290f5251252d76b0",
  "copyright": "Copyright © ZyeemZia"
 }
