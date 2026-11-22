@@ -1,15 +1,15 @@
 {
- "version": "2.0.3",
- "notes": "ZBZAI 2.0.3: attach up to 10 files of any kind (Word, Excel, PowerPoint, PDF, OpenDocument, RTF, code, pictures, sound, video) and ask across them, then save the edited file in its own format. New Studio Video: cut, join, music, captions, logo, shapes for Reels and YouTube, speed, convert, compress, and make videos from pictures with narration. Songs now play as real music, with a music video from your photos; pictures can start from your own photo. Spelling is fixed as you type, past chats can be searched and renamed, answers can be short or detailed, and ChatGPT, Gemini, DeepSeek, Groq, Mistral, Grok and OpenRouter can be added with your own keys. ZBZAI moves to its own ZBZAI folder and names. Everything you taught is kept.",
+ "version": "2.0.4",
+ "notes": "ZBZAI 2.0.4: attached files and pictures now reach ZyeemZia AI in full (pictures are understood), and its flagship agent answers by default. When the free allowance is used up, another brain you have (a local model or one with your own key) answers instead. Claude now sits in the same list as ChatGPT, Gemini and the others, and works with just your key. Everything you taught is kept.",
  "zip_zbzai": "https://zbzai.zyeemzia.com/download/ZBZAI-Update.zip",
- "sha256_zbzai": "19a75e22396e5c7ed7154293a59e1cd9a5b79a8bacb02f825944760fc29ed0a2",
- "size_zbzai": 1106089,
+ "sha256_zbzai": "295ce2f928325dade5c04ba77fce016f7f93c89398b99c414f2ecda9967b00cd",
+ "size_zbzai": 1123178,
  "zip_zbzai_portable": "https://zbzai.zyeemzia.com/download/ZBZAI-Engine.zip",
- "sha256_zbzai_portable": "c8c5934cd8a338241dbe7cf2e915db9d6b032797ad7c64d46c434bb17c67f2eb",
+ "sha256_zbzai_portable": "a3e6bf0aff56793fa87ed160d97b922c55215493195f3768888190a1575e5d75",
  "zip": "https://zbzai.zyeemzia.com/download/ZAI-Update.zip",
- "sha256": "14b023feac87a7983e928c56310d5de80d9f7ad68658e8cb96c3e2720e90d75e",
- "size": 1106484,
+ "sha256": "1f260aafc72a69802b0dd404ae60510d3aa4a6cca9a8cf874b65bd09b3efa6a1",
+ "size": 1123573,
  "zip_portable": "https://zbzai.zyeemzia.com/download/ZAI-Portable-Update.zip",
- "sha256_portable": "8f149b28c6ce113a6b2f6bcff2c4859db94a73051258832c0f7974b45f2b6017",
+ "sha256_portable": "c36e4fae66e4a00caf3863c9bc855991b2fbe0f355240c25118a4a558b890c8d",
  "copyright": "Copyright © ZyeemZia"
 }
