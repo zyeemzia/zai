@@ -1,15 +1,15 @@
 {
- "version": "2.0.7",
- "notes": "ZBZAI 2.0.7: ZBZAI is faster and smoother. Pages scroll smoothly with nothing blurring behind the top bar, and ZBZAI opens almost at once after the first visit because the browser reuses the app's files and receives them compressed. Everything you taught is kept.",
+ "version": "2.0.8",
+ "notes": "ZBZAI 2.0.8: Writing in ZBZAI is now justified, with even left and right edges, in answers and on every screen, so it reads like a printed page. Everything you taught is kept.",
  "zip_zbzai": "https://zbzai.zyeemzia.com/download/ZBZAI-Update.zip",
- "sha256_zbzai": "dceb9a862298ef0de7f887f8d9ed5469df5c18b3e000c467209c34ac2cbb84ed",
- "size_zbzai": 1142980,
+ "sha256_zbzai": "4c8f6e9bb1adc47e155d10b4041fc0b055dc7f53cd24578d635cc62364bc7599",
+ "size_zbzai": 1143539,
  "zip_zbzai_portable": "https://zbzai.zyeemzia.com/download/ZBZAI-Engine.zip",
- "sha256_zbzai_portable": "0f33ff6132d24d681380363d0f4832a0a4b1b262872cf2128a357e84c41dfaa2",
+ "sha256_zbzai_portable": "709696046dfa62fa4224095ad4850f456361f914d92476f6b847f6b5fd97a223",
  "zip": "https://zbzai.zyeemzia.com/download/ZAI-Update.zip",
- "sha256": "6605fdaf257e2a783586620d3ab6c307680695fd1c9c1dc399506d8b363c869c",
- "size": 1143374,
+ "sha256": "41483bd7c644c44580d92d40f693186ae63d94da2890d27580d1c1342004ac9a",
+ "size": 1143933,
  "zip_portable": "https://zbzai.zyeemzia.com/download/ZAI-Portable-Update.zip",
- "sha256_portable": "be06593b716b0570fb12feadef52f9082e6c6a1f0ce490c3a798e226b9a5bdc2",
+ "sha256_portable": "dfc06bea7eae4f96a243d1963e8119d6b3475a1adfbc39f92fb8338941ff4014",
  "copyright": "Copyright © ZyeemZia"
 }
