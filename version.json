@@ -1,15 +1,15 @@
 {
- "version": "2.0.5",
- "notes": "ZBZAI 2.0.5: ZBZAI now keeps an offline copy of the ZyeemZia AI knowledge library, the same public facts every ZyeemZia AI agent uses, so answers on your network know them even with no internet, with sources. It refreshes by itself when online, stays apart from what you taught, and can be switched off in Settings. Everything you taught is kept.",
+ "version": "2.0.6",
+ "notes": "ZBZAI 2.0.6: Voice typing now keeps listening through short pauses, stops by itself when you finish, and works with no internet: the ZBZAI computer turns your voice into text itself. ZBZAI is also safer and steadier: it pauses PIN entry after repeated wrong PINs, refuses changes sent by other websites, and answers badly formed requests with a clear message. Everything you taught is kept.",
  "zip_zbzai": "https://zbzai.zyeemzia.com/download/ZBZAI-Update.zip",
- "sha256_zbzai": "5d296d24eecf0594b1e19b0e2ff5402a2eff53fc13bbfa459f61a6a1a14308c3",
- "size_zbzai": 1139864,
+ "sha256_zbzai": "4a7805a79a42a395a5279e00ea3488a5ee81846ea1070c9c6f5a3655ac5f915a",
+ "size_zbzai": 1140544,
  "zip_zbzai_portable": "https://zbzai.zyeemzia.com/download/ZBZAI-Engine.zip",
- "sha256_zbzai_portable": "6d7c8bca88480a0a4666aa5420baec9256323dec30a4ed614c99add3b5d42dac",
+ "sha256_zbzai_portable": "ca36e262af56b57ac04753ce1d9630bed4a011bdd7c1b208907a6b789200e5a7",
  "zip": "https://zbzai.zyeemzia.com/download/ZAI-Update.zip",
- "sha256": "9fe53231e5504dfbcd5dd017851415b9ad94a87f6b13e582c8f75b26277e5fb5",
- "size": 1140259,
+ "sha256": "d07cbede5132b9dc3cb2666615bac883793276614ff7e744d95045f7ce833b63",
+ "size": 1140938,
  "zip_portable": "https://zbzai.zyeemzia.com/download/ZAI-Portable-Update.zip",
- "sha256_portable": "c7f44210c4188b9dd65d107e85ae980c3264c739afa21be9290f5251252d76b0",
+ "sha256_portable": "239ef417ccd25eaff70d40219916daaeccaf3e9a17f338f4714eba56907ab4f3",
  "copyright": "Copyright © ZyeemZia"
 }
