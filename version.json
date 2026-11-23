@@ -1,15 +1,15 @@
 {
- "version": "2.0.6",
- "notes": "ZBZAI 2.0.6: Voice typing now keeps listening through short pauses, stops by itself when you finish, and works with no internet: the ZBZAI computer turns your voice into text itself. ZBZAI is also safer and steadier: it pauses PIN entry after repeated wrong PINs, refuses changes sent by other websites, and answers badly formed requests with a clear message. Everything you taught is kept.",
+ "version": "2.0.7",
+ "notes": "ZBZAI 2.0.7: ZBZAI is faster and smoother. Pages scroll smoothly with nothing blurring behind the top bar, and ZBZAI opens almost at once after the first visit because the browser reuses the app's files and receives them compressed. Everything you taught is kept.",
  "zip_zbzai": "https://zbzai.zyeemzia.com/download/ZBZAI-Update.zip",
- "sha256_zbzai": "4a7805a79a42a395a5279e00ea3488a5ee81846ea1070c9c6f5a3655ac5f915a",
- "size_zbzai": 1140544,
+ "sha256_zbzai": "dceb9a862298ef0de7f887f8d9ed5469df5c18b3e000c467209c34ac2cbb84ed",
+ "size_zbzai": 1142980,
  "zip_zbzai_portable": "https://zbzai.zyeemzia.com/download/ZBZAI-Engine.zip",
- "sha256_zbzai_portable": "ca36e262af56b57ac04753ce1d9630bed4a011bdd7c1b208907a6b789200e5a7",
+ "sha256_zbzai_portable": "0f33ff6132d24d681380363d0f4832a0a4b1b262872cf2128a357e84c41dfaa2",
  "zip": "https://zbzai.zyeemzia.com/download/ZAI-Update.zip",
- "sha256": "d07cbede5132b9dc3cb2666615bac883793276614ff7e744d95045f7ce833b63",
- "size": 1140938,
+ "sha256": "6605fdaf257e2a783586620d3ab6c307680695fd1c9c1dc399506d8b363c869c",
+ "size": 1143374,
  "zip_portable": "https://zbzai.zyeemzia.com/download/ZAI-Portable-Update.zip",
- "sha256_portable": "239ef417ccd25eaff70d40219916daaeccaf3e9a17f338f4714eba56907ab4f3",
+ "sha256_portable": "be06593b716b0570fb12feadef52f9082e6c6a1f0ce490c3a798e226b9a5bdc2",
  "copyright": "Copyright © ZyeemZia"
 }

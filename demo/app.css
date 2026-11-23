@@ -263,3 +263,5 @@ label.file.drop input { position: absolute; width: 1px; height: 1px; opacity: 0;
 a.primary.btn { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; padding: 10px 16px; border-radius: 12px; }
 .attach .aedit { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: .82rem; color: var(--ink); }
 .card h3.sub { display: flex; align-items: center; gap: 6px; margin: 18px 0 6px; font-size: 1rem; }
+/* ---------- speed: nothing blurs or repaints while the page scrolls ---------- */
+.top { background: var(--panel); -webkit-backdrop-filter: none; backdrop-filter: none; }
