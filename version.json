@@ -1,15 +1,15 @@
 {
- "version": "2.0.11",
- "notes": "ZBZAI 2.0.11: New Automate tab. ZBZAI can now do things on the ZBZAI computer with your permission: open and list folders, open and print files, make folders, copy, move and rename, save an answer as a file, open a website and start a few programs. It shows the plan first and waits for Allow, works only in folders the admin allows, and is off until the admin turns it on. Everything you taught is kept.",
+ "version": "2.0.12",
+ "notes": "ZBZAI 2.0.12: Ask for a picture and ZBZAI now shows real pictures from the internet above its answer, with the maker and licence of each, and keeps them on your computer. It never makes up a picture link. Everything you taught is kept.",
  "zip_zbzai": "https://zbzai.zyeemzia.com/download/ZBZAI-Update.zip",
- "sha256_zbzai": "dcccf716808e0260d51604b8bd8f4250e6386371c7e83a629cd10629410c76d0",
- "size_zbzai": 1360308,
+ "sha256_zbzai": "6fd139e109f4de41e0df0babda953a84e2752526ad165b53a5481e8d45bc0e4a",
+ "size_zbzai": 1386641,
  "zip_zbzai_portable": "https://zbzai.zyeemzia.com/download/ZBZAI-Engine.zip",
- "sha256_zbzai_portable": "c6eec5d4e61b92308db05858dcf1f37b75d8c3772b9cfd31ef5a604f42fd3a5c",
+ "sha256_zbzai_portable": "211da12784c4f19dd63e8a4bedd14c1502a88cfc5173a41360e29d42834aeb13",
  "zip": "https://zbzai.zyeemzia.com/download/ZAI-Update.zip",
- "sha256": "4bb8f63982d7f04bdcde73eb676ac73ec24b3579099d61696970781b0ba5db83",
- "size": 1360698,
+ "sha256": "348b7abd2bc13fdec2c52c9c9e1443936cd77eb9725eade5a42b98e6b648c456",
+ "size": 1387031,
  "zip_portable": "https://zbzai.zyeemzia.com/download/ZAI-Portable-Update.zip",
- "sha256_portable": "ae303eb5634bcf7873a3d5737ea9cb765fce1ab988f98ce291ae810c9e43b096",
+ "sha256_portable": "8e8767859d06e2d088450659131d71ab4c9cad74deccec084317f60f5bb74c68",
  "copyright": "Copyright © ZyeemZia"
 }
