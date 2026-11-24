@@ -1,15 +1,15 @@
 {
- "version": "2.0.12",
- "notes": "ZBZAI 2.0.12: Ask for a picture and ZBZAI now shows real pictures from the internet above its answer, with the maker and licence of each, and keeps them on your computer. It never makes up a picture link. Everything you taught is kept.",
+ "version": "2.0.13",
+ "notes": "ZBZAI 2.0.13: Pictures now come from several free libraries at once, and ZBZAI looks at them, keeps the ones that really show what you asked for and says what each one shows. Ask \"what does it look like\" or \"show me\" and it understands. Ask for links and it gives real ones. It never makes up a picture or a link. Everything you taught is kept.",
  "zip_zbzai": "https://zbzai.zyeemzia.com/download/ZBZAI-Update.zip",
- "sha256_zbzai": "6fd139e109f4de41e0df0babda953a84e2752526ad165b53a5481e8d45bc0e4a",
- "size_zbzai": 1386641,
+ "sha256_zbzai": "60cc4b660241e629ced37b9e0d899c43f1de98e43061c483632f071a840102ee",
+ "size_zbzai": 1421927,
  "zip_zbzai_portable": "https://zbzai.zyeemzia.com/download/ZBZAI-Engine.zip",
- "sha256_zbzai_portable": "211da12784c4f19dd63e8a4bedd14c1502a88cfc5173a41360e29d42834aeb13",
+ "sha256_zbzai_portable": "0cdcd3d81700f6db967096b039b5a9ca8dcfdce83ae6333dcf33ebb10aa9a517",
  "zip": "https://zbzai.zyeemzia.com/download/ZAI-Update.zip",
- "sha256": "348b7abd2bc13fdec2c52c9c9e1443936cd77eb9725eade5a42b98e6b648c456",
- "size": 1387031,
+ "sha256": "a9bb6db202b2105d18a5a9ffcc6abb0cf84c35ea7417dc2caba3390ce2eafdd0",
+ "size": 1422317,
  "zip_portable": "https://zbzai.zyeemzia.com/download/ZAI-Portable-Update.zip",
- "sha256_portable": "8e8767859d06e2d088450659131d71ab4c9cad74deccec084317f60f5bb74c68",
+ "sha256_portable": "5fbb460843fa6c832e0534ca7c8ad915e67776c0c1dd8fd332def19f49fc6b85",
  "copyright": "Copyright © ZyeemZia"
 }
