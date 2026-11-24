@@ -58,6 +58,7 @@
         <button type="button" role="menuitem" data-m="save"><i class="gi gi-download" aria-hidden="true"></i>Save this chat</button>
         <label class="mrow"><i class="gi gi-pen" aria-hidden="true"></i>Answers <select id="style" aria-label="Answer length"><option value="short">Short</option><option value="balanced">Balanced</option><option value="detailed">Detailed</option></select></label>
         <label class="mrow check"><input type="checkbox" id="acOn"> Fix spelling as I type</label>
+        <label class="mrow check" title="Reads an encyclopedia, published studies and the news, then answers as a report with numbered sources"><input type="checkbox" id="research"> Research: read many sources and cite them</label>
         <button type="button" role="menuitem" data-m="keys"><i class="gi gi-spark" aria-hidden="true"></i>Keyboard shortcuts</button>
       </div>
       <input type="file" id="askFile" hidden multiple accept=".txt,.md,.csv,.tsv,.json,.html,.htm,.xml,.yaml,.yml,.log,.rtf,.docx,.doc,.odt,.xlsx,.xls,.ods,.pptx,.ppt,.odp,.pdf,.epub,.py,.js,.ts,.java,.c,.cpp,.cs,.go,.php,.sql,.css,.srt,.vtt,image/*,audio/*,video/*">
@@ -394,9 +395,10 @@
 <footer class="foot" id="zz-copy">ZBZAI™ by ZyeemZia · <span id="ver"></span> · Copyright © ZyeemZia</footer>
 <script src="autocorrect.js?v=37bc51e766"></script>
 <script src="qr.js?v=4e6d37b618"></script>
-<script src="seed.js?v=dcff7c2d50"></script>
+<script src="codebox.js?v=3ddf181fc8"></script>
+<script src="seed.js?v=b1b0d82664"></script>
 <script src="demo-backend.js?v=3ed8ee0a04"></script>
-<script src="app.js?v=7ddd763720"></script>
+<script src="app.js?v=7afd2808ce"></script>
 <script src="studio.js?v=7a01ef7532"></script>
 <script src="coworkers.js?v=755f62e48c"></script>
 <script>/* ZyeemZia house style: justified writing. Paragraphs and list text that read left-aligned are justified; centred text, headings, buttons and columns too narrow to justify cleanly stay as they are. Copyright © ZyeemZia */(function(){var S='p,li,dd,blockquote';function j(r){if(!r||!r.querySelectorAll)return;var L=r.querySelectorAll(S);for(var i=0;i<L.length;i++){var e=L[i];if(e.getAttribute('data-zj'))continue;e.setAttribute('data-zj','1');var a=getComputedStyle(e).textAlign;if(a==='start'||a==='left'||a==='-webkit-auto'){var w=e.clientWidth;if(!w||w>=280)e.style.textAlign='justify'}}}function go(){j(document);if(!window.MutationObserver)return;new MutationObserver(function(m){for(var i=0;i<m.length;i++){var N=m[i].addedNodes;for(var k=0;k<N.length;k++){var n=N[k];if(n.nodeType===1)j(n.matches&&n.matches(S)?n.parentNode:n)}}}).observe(document.body,{childList:true,subtree:true})}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})()</script>
