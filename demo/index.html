@@ -309,6 +309,7 @@
       </details>
       <label class="check"><input type="checkbox" id="sOpen"> Anyone on the network can teach ZBZAI</label>
       <label class="check"><input type="checkbox" id="sLib"> Keep the ZyeemZia knowledge library for offline answers <span class="muted" id="sLibInfo"></span></label>
+      <label class="check"><input type="checkbox" id="sWeb"> Look recent things up on the internet, and keep what is found in the knowledge vault</label>
       <button class="primary" id="sSave">Save settings</button>
       <p class="msg" id="sMsg" role="status"></p>
       <div class="info" id="sInfo"></div>
@@ -354,9 +355,9 @@
 <footer class="foot" id="zz-copy">ZBZAI™ by ZyeemZia · <span id="ver"></span> · Copyright © ZyeemZia</footer>
 <script src="autocorrect.js?v=37bc51e766"></script>
 <script src="qr.js?v=4e6d37b618"></script>
-<script src="seed.js?v=822bec96a3"></script>
+<script src="seed.js?v=d1abeed1ca"></script>
 <script src="demo-backend.js?v=3ed8ee0a04"></script>
-<script src="app.js?v=f8ed595661"></script>
+<script src="app.js?v=ca254fba67"></script>
 <script src="studio.js?v=7a01ef7532"></script>
 <script src="coworkers.js?v=0097c7b247"></script>
 <script>/* ZyeemZia house style: justified writing. Paragraphs and list text that read left-aligned are justified; centred text, headings, buttons and columns too narrow to justify cleanly stay as they are. Copyright © ZyeemZia */(function(){var S='p,li,dd,blockquote';function j(r){if(!r||!r.querySelectorAll)return;var L=r.querySelectorAll(S);for(var i=0;i<L.length;i++){var e=L[i];if(e.getAttribute('data-zj'))continue;e.setAttribute('data-zj','1');var a=getComputedStyle(e).textAlign;if(a==='start'||a==='left'||a==='-webkit-auto'){var w=e.clientWidth;if(!w||w>=280)e.style.textAlign='justify'}}}function go(){j(document);if(!window.MutationObserver)return;new MutationObserver(function(m){for(var i=0;i<m.length;i++){var N=m[i].addedNodes;for(var k=0;k<N.length;k++){var n=N[k];if(n.nodeType===1)j(n.matches&&n.matches(S)?n.parentNode:n)}}}).observe(document.body,{childList:true,subtree:true})}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})()</script>
