@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#070a17">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="ZBZAI"><meta name="application-name" content="ZBZAI">
-<link rel="stylesheet" href="app.css?v=5e514a80ec">
+<link rel="stylesheet" href="app.css?v=8a1d24b1b6">
 <link rel="stylesheet" href="icons.css?v=488d0ecedf">
 </head>
 <body>
@@ -22,6 +22,7 @@
     <button role="tab" data-tab="chat" aria-selected="true"><i class="gi gi-chat" aria-hidden="true"></i>Chat</button>
     <button role="tab" data-tab="studio" aria-selected="false"><i class="gi gi-studio" aria-hidden="true"></i>Studio</button>
     <button role="tab" data-tab="cowork" aria-selected="false"><i class="gi gi-team" aria-hidden="true"></i>Coworkers</button>
+    <button role="tab" data-tab="auto" aria-selected="false"><i class="gi gi-check" aria-hidden="true"></i>Automate</button>
     <button role="tab" data-tab="know" aria-selected="false"><i class="gi gi-book" aria-hidden="true"></i>Knowledge</button>
     <button role="tab" data-tab="share" aria-selected="false"><i class="gi gi-share" aria-hidden="true"></i>Share</button>
     <button role="tab" data-tab="settings" aria-selected="false"><i class="gi gi-gear" aria-hidden="true"></i>Settings</button>
@@ -226,6 +227,44 @@
   </section>
 
   <!-- knowledge -->
+  <section class="pane" id="auto" hidden>
+    <div class="cols">
+      <div class="card">
+        <h2>Do it on the ZBZAI computer</h2>
+        <p class="muted" id="aState">Checking ...</p>
+        <div id="aWork" hidden>
+          <label>What should ZBZAI do? <textarea id="aText" rows="3" placeholder="make folder Reports&#10;save this as Reports\brief.docx&#10;open Reports"></textarea></label>
+          <div class="row"><button class="primary" type="button" id="aPlan"><i class="gi gi-spark" aria-hidden="true"></i>Show the plan</button></div>
+          <p class="muted small">One step per line. ZBZAI shows exactly what it will do and waits for you to allow it. It can open and list folders, open and print files, make folders, copy, move and rename, send to the Recycle Bin, save the last answer as a file, open a website and start a few programs. Nothing else, and only inside the allowed folders.</p>
+          <div class="card plan" id="aCard" hidden>
+            <h3>ZBZAI wants to do this</h3>
+            <ol id="aSteps"></ol>
+            <label id="aPinRow" hidden><span id="aPinWhy"></span> <input id="aPin" type="password" inputmode="numeric" autocomplete="off" placeholder="Admin PIN"></label>
+            <div class="row"><button class="primary" type="button" id="aAllow"><i class="gi gi-check" aria-hidden="true"></i>Allow</button><button type="button" class="ghost" id="aCancel"><i class="gi gi-x" aria-hidden="true"></i>Cancel</button></div>
+          </div>
+          <p class="msg" id="aMsg" role="status"></p>
+          <ol id="aDone" class="done"></ol>
+          <h3 class="fmt-h">Routines</h3>
+          <p class="muted small">A saved list of steps you run with one tap. Each run still asks for permission.</p>
+          <div id="aRoutines" class="row"></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Permission and folders <small>admin</small></h2>
+        <p class="muted small">Off until the admin turns it on. ZBZAI can touch only the folders listed here. From a phone or another computer, every request needs the admin PIN; on the ZBZAI computer itself, only deleting and printing do.</p>
+        <label>Admin PIN <input id="aAdmin" type="password" inputmode="numeric" autocomplete="off"></label>
+        <label class="check"><input type="checkbox" id="aOn"> Let ZBZAI do things on this computer, with permission each time</label>
+        <label>Allowed folders, one per line <textarea id="aFolders" rows="3"></textarea></label>
+        <div class="row"><button type="button" class="primary" id="aSave">Save</button><button type="button" class="ghost" id="aLogBtn"><i class="gi gi-history" aria-hidden="true"></i>Show the log</button></div>
+        <h3 class="fmt-h">Save a routine</h3>
+        <label>Name <input id="aRName" maxlength="60" placeholder="Morning folders"></label>
+        <label>Steps, one per line <textarea id="aRText" rows="3" placeholder="open Reports&#10;open notepad"></textarea></label>
+        <div class="row"><button type="button" class="ghost" id="aRSave"><i class="gi gi-star" aria-hidden="true"></i>Save routine</button></div>
+        <p class="msg" id="aAdminMsg" role="status"></p>
+        <ol id="aLog" class="done small"></ol>
+      </div>
+    </div>
+  </section>
   <section class="pane" id="know" hidden>
     <div class="cols">
       <div class="card">
@@ -355,11 +394,11 @@
 <footer class="foot" id="zz-copy">ZBZAI™ by ZyeemZia · <span id="ver"></span> · Copyright © ZyeemZia</footer>
 <script src="autocorrect.js?v=37bc51e766"></script>
 <script src="qr.js?v=4e6d37b618"></script>
-<script src="seed.js?v=d1abeed1ca"></script>
+<script src="seed.js?v=846a30a697"></script>
 <script src="demo-backend.js?v=3ed8ee0a04"></script>
-<script src="app.js?v=ca254fba67"></script>
+<script src="app.js?v=6a4d46e167"></script>
 <script src="studio.js?v=7a01ef7532"></script>
-<script src="coworkers.js?v=0097c7b247"></script>
+<script src="coworkers.js?v=58b20a3637"></script>
 <script>/* ZyeemZia house style: justified writing. Paragraphs and list text that read left-aligned are justified; centred text, headings, buttons and columns too narrow to justify cleanly stay as they are. Copyright © ZyeemZia */(function(){var S='p,li,dd,blockquote';function j(r){if(!r||!r.querySelectorAll)return;var L=r.querySelectorAll(S);for(var i=0;i<L.length;i++){var e=L[i];if(e.getAttribute('data-zj'))continue;e.setAttribute('data-zj','1');var a=getComputedStyle(e).textAlign;if(a==='start'||a==='left'||a==='-webkit-auto'){var w=e.clientWidth;if(!w||w>=280)e.style.textAlign='justify'}}}function go(){j(document);if(!window.MutationObserver)return;new MutationObserver(function(m){for(var i=0;i<m.length;i++){var N=m[i].addedNodes;for(var k=0;k<N.length;k++){var n=N[k];if(n.nodeType===1)j(n.matches&&n.matches(S)?n.parentNode:n)}}}).observe(document.body,{childList:true,subtree:true})}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})()</script>
 </body>
 </html>

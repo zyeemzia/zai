@@ -269,3 +269,11 @@ a.primary.btn { display: inline-flex; align-items: center; gap: 6px; text-decora
 .card h3.sub { display: flex; align-items: center; gap: 6px; margin: 18px 0 6px; font-size: 1rem; }
 /* ---------- speed: nothing blurs or repaints while the page scrolls ---------- */
 .top { background: var(--panel); -webkit-backdrop-filter: none; backdrop-filter: none; }
+
+/* Automate */
+#auto .plan { margin: 12px 0; border: 2px solid var(--gold); }
+#auto .plan ol, #auto ol.done { margin: 8px 0 10px 20px; padding: 0; display: grid; gap: 6px; }
+#auto ol.done li.ok { color: var(--ok); } #auto ol.done li.bad { color: var(--bad); }
+#auto ol.done { overflow-wrap: anywhere; }
+#auto textarea { width: 100%; }
+#auto .plan li, #auto ol.done li { text-align: left !important; }

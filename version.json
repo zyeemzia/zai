@@ -1,15 +1,15 @@
 {
- "version": "2.0.10",
- "notes": "ZBZAI 2.0.10: ZBZAI now looks recent things up on the internet (latest news, today, who holds an office now), answers with dates and named sources, and keeps what it finds in the knowledge vault for offline answers later. Turn it off in Settings if you prefer. Everything you taught is kept.",
+ "version": "2.0.11",
+ "notes": "ZBZAI 2.0.11: New Automate tab. ZBZAI can now do things on the ZBZAI computer with your permission: open and list folders, open and print files, make folders, copy, move and rename, save an answer as a file, open a website and start a few programs. It shows the plan first and waits for Allow, works only in folders the admin allows, and is off until the admin turns it on. Everything you taught is kept.",
  "zip_zbzai": "https://zbzai.zyeemzia.com/download/ZBZAI-Update.zip",
- "sha256_zbzai": "e2f63038b6c9c346ffc30c4ef87441f22f74ac7a5a91937374cc5a157c3ed321",
- "size_zbzai": 1299794,
+ "sha256_zbzai": "dcccf716808e0260d51604b8bd8f4250e6386371c7e83a629cd10629410c76d0",
+ "size_zbzai": 1360308,
  "zip_zbzai_portable": "https://zbzai.zyeemzia.com/download/ZBZAI-Engine.zip",
- "sha256_zbzai_portable": "5013acc1bf75aa2150c5f945d5576e83d957dc57a772d5d54b3e2c8914dd6768",
+ "sha256_zbzai_portable": "c6eec5d4e61b92308db05858dcf1f37b75d8c3772b9cfd31ef5a604f42fd3a5c",
  "zip": "https://zbzai.zyeemzia.com/download/ZAI-Update.zip",
- "sha256": "327f11f800bf99d44cc5a138f569b49cdac247e59d03ba359e0016743da088bd",
- "size": 1300184,
+ "sha256": "4bb8f63982d7f04bdcde73eb676ac73ec24b3579099d61696970781b0ba5db83",
+ "size": 1360698,
  "zip_portable": "https://zbzai.zyeemzia.com/download/ZAI-Portable-Update.zip",
- "sha256_portable": "e238e4d0d032f452176fc53f0353c21c0e5091d5dc1b59fd5560ae7d816e92ba",
+ "sha256_portable": "ae303eb5634bcf7873a3d5737ea9cb765fce1ab988f98ce291ae810c9e43b096",
  "copyright": "Copyright © ZyeemZia"
 }
