@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#070a17">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="ZBZAI"><meta name="application-name" content="ZBZAI">
-<link rel="stylesheet" href="app.css?v=18f8bcfe9d">
+<link rel="stylesheet" href="app.css?v=5e514a80ec">
 <link rel="stylesheet" href="icons.css?v=488d0ecedf">
 </head>
 <body>
@@ -82,6 +82,11 @@
           <div id="dFields" class="fields"></div>
           <div class="row"><button class="primary" type="button" id="dGo"><i class="gi gi-spark" aria-hidden="true"></i>Write it</button><button type="button" class="ghost" id="dDraft"><i class="gi gi-doc" aria-hidden="true"></i>Quick draft (no AI)</button></div>
           <p class="muted small" id="dHint"></p>
+          <h3 class="fmt-h">Your own files as formats</h3>
+          <p class="muted small">Add a Word, Excel or PowerPoint file and ZBZAI writes into that very file, keeping its letterhead, margins, styles and design. In a Word file, put [Body] where the text should go, and [Subject] and [Date] where you want them.</p>
+          <div class="row"><button type="button" class="ghost" id="fAdd"><i class="gi gi-star" aria-hidden="true"></i>Add a file as a format</button><button type="button" class="ghost" id="fPdf"><i class="gi gi-file" aria-hidden="true"></i>Convert a file to PDF</button><button type="button" class="ghost" id="fDocx"><i class="gi gi-doc" aria-hidden="true"></i>PDF or old file to Word</button></div>
+          <input type="file" id="fAddIn" accept=".docx,.xlsx,.pptx" hidden><input type="file" id="fPdfIn" accept=".doc,.docx,.rtf,.odt,.txt,.xls,.xlsx,.ods,.csv,.ppt,.pptx,.odp,.html,.htm,.md" hidden><input type="file" id="fDocxIn" accept=".pdf,.doc,.rtf,.odt,.txt,.html,.htm" hidden>
+          <p class="msg" id="fMsg" role="status"></p>
         </div>
         <div class="card">
           <h2>Your document <small id="dState"></small></h2>
@@ -349,11 +354,11 @@
 <footer class="foot" id="zz-copy">ZBZAI™ by ZyeemZia · <span id="ver"></span> · Copyright © ZyeemZia</footer>
 <script src="autocorrect.js?v=37bc51e766"></script>
 <script src="qr.js?v=4e6d37b618"></script>
-<script src="seed.js?v=d55c2b7b1c"></script>
+<script src="seed.js?v=822bec96a3"></script>
 <script src="demo-backend.js?v=3ed8ee0a04"></script>
-<script src="app.js?v=9fdd91cc70"></script>
-<script src="studio.js?v=4d157404df"></script>
-<script src="coworkers.js?v=cc0aeccc8f"></script>
+<script src="app.js?v=f8ed595661"></script>
+<script src="studio.js?v=7a01ef7532"></script>
+<script src="coworkers.js?v=0097c7b247"></script>
 <script>/* ZyeemZia house style: justified writing. Paragraphs and list text that read left-aligned are justified; centred text, headings, buttons and columns too narrow to justify cleanly stay as they are. Copyright © ZyeemZia */(function(){var S='p,li,dd,blockquote';function j(r){if(!r||!r.querySelectorAll)return;var L=r.querySelectorAll(S);for(var i=0;i<L.length;i++){var e=L[i];if(e.getAttribute('data-zj'))continue;e.setAttribute('data-zj','1');var a=getComputedStyle(e).textAlign;if(a==='start'||a==='left'||a==='-webkit-auto'){var w=e.clientWidth;if(!w||w>=280)e.style.textAlign='justify'}}}function go(){j(document);if(!window.MutationObserver)return;new MutationObserver(function(m){for(var i=0;i<m.length;i++){var N=m[i].addedNodes;for(var k=0;k<N.length;k++){var n=N[k];if(n.nodeType===1)j(n.matches&&n.matches(S)?n.parentNode:n)}}}).observe(document.body,{childList:true,subtree:true})}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})()</script>
 </body>
 </html>

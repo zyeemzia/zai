@@ -197,6 +197,10 @@ body.wide main { max-width: 1320px; }
 .xmenu button { display: flex; align-items: center; gap: 8px; padding: 9px 10px; border: 0; background: none; border-radius: 10px; cursor: pointer; color: var(--ink); text-align: left; font-weight: 600; font-size: .92rem; }
 .xmenu button:hover:not([disabled]), .xmenu button:focus-visible { background: var(--panel2); }
 .xmenu button[disabled] { opacity: .45; cursor: not-allowed; }
+.xmenu .xlay { display: grid; gap: 6px; padding: 2px 10px 8px; border-bottom: 1px solid var(--line); margin-bottom: 4px; }
+.xmenu .xlay select, .xmenu .xlay input { width: 100%; min-width: 0; padding: 7px 8px; border-radius: 9px; border: 1px solid var(--line); background: var(--panel2); color: var(--ink); font: inherit; font-size: .88rem; }
+.xmenu .xlay p { margin: 0; max-width: 250px; }
+.fmt-h { margin: 18px 0 4px; font-size: 1rem; }
 .xmenu small { margin-left: auto; color: var(--gold); font-weight: 700; }
 
 /* ---------- 1.8: phones, QR codes, install ---------- */
