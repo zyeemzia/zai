@@ -1,15 +1,15 @@
 {
- "version": "2.0.15",
- "notes": "ZBZAI 2.0.15: ZBZAI now answers by itself when no AI brain can: with internet it looks the question up on free search feeds, the news and an encyclopedia, and writes the answer from what it finds, with numbered sources and links, no key and no daily limit. Sums, the date and the time are answered at once. Everything you taught is kept.",
+ "version": "2.0.16",
+ "notes": "ZBZAI 2.0.16: Bangla is now understood word by word, in the knowledge vault and on the internet: a question written in Bangla is looked up in the Bangla encyclopedia and Bangla news and answered in Bangla. Answers written from the internet come faster. Everything you taught is kept.",
  "zip_zbzai": "https://zbzai.zyeemzia.com/download/ZBZAI-Update.zip",
- "sha256_zbzai": "5f6a50d848b9fb6e839eb4947720395e73a38a9ac0d066f636e550e9b294315c",
- "size_zbzai": 1569895,
+ "sha256_zbzai": "5786eb52262c00030f54d2bb12d991e5fa68c5aef81d1a61916017b87453d5ab",
+ "size_zbzai": 1579220,
  "zip_zbzai_portable": "https://zbzai.zyeemzia.com/download/ZBZAI-Engine.zip",
- "sha256_zbzai_portable": "86af2a2de1e218bfbb889dc8cd5574890ec1154b6320d20fdfa87cb6cbcf47df",
+ "sha256_zbzai_portable": "d0ac6f5ef1dfc9bb46ab878c960d99af794bec514aa6c534297c7898758de7aa",
  "zip": "https://zbzai.zyeemzia.com/download/ZAI-Update.zip",
- "sha256": "a1c90ce2b27372bd4e4bd99152d6e58b92559a8df3a1b5cd46e7c601a324d763",
- "size": 1570281,
+ "sha256": "5f2b932e955f7ea528aa3d9563dba20e38c5e405e21b7785861d1e6278b32f50",
+ "size": 1579606,
  "zip_portable": "https://zbzai.zyeemzia.com/download/ZAI-Portable-Update.zip",
- "sha256_portable": "3a329af1d5f7025f56029689d0bfe13ddc5481a97aedabb0a4a7800a74ed9ec4",
+ "sha256_portable": "245747e9104816eb023c9a19f405b779246b8df2e3b7caffcc995f02d15c86ab",
  "copyright": "Copyright © ZyeemZia"
 }
