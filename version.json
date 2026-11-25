@@ -1,15 +1,15 @@
 {
- "version": "2.0.14",
- "notes": "ZBZAI 2.0.14: Research with numbered sources: say \"Research ...\" or tick Research, and ZBZAI reads an encyclopedia, published studies, preprints and the news side by side, shows what it read with links and writes a report that cites them. Code is now checked and runs: Python in an answer is compiled and corrected, and every code block has Copy, Download, Run or Preview and Fix this error. Everything you taught is kept.",
+ "version": "2.0.15",
+ "notes": "ZBZAI 2.0.15: ZBZAI now answers by itself when no AI brain can: with internet it looks the question up on free search feeds, the news and an encyclopedia, and writes the answer from what it finds, with numbered sources and links, no key and no daily limit. Sums, the date and the time are answered at once. Everything you taught is kept.",
  "zip_zbzai": "https://zbzai.zyeemzia.com/download/ZBZAI-Update.zip",
- "sha256_zbzai": "84c998dd648d2a810e4911b2fca1d7b8458cf81dc834f29d8ae9cef0ee76f02a",
- "size_zbzai": 1499122,
+ "sha256_zbzai": "5f6a50d848b9fb6e839eb4947720395e73a38a9ac0d066f636e550e9b294315c",
+ "size_zbzai": 1569895,
  "zip_zbzai_portable": "https://zbzai.zyeemzia.com/download/ZBZAI-Engine.zip",
- "sha256_zbzai_portable": "99677d54b3dd2c7a9c5cca62b0ceaa86225acffa6b9120d381e4762e694628f3",
+ "sha256_zbzai_portable": "86af2a2de1e218bfbb889dc8cd5574890ec1154b6320d20fdfa87cb6cbcf47df",
  "zip": "https://zbzai.zyeemzia.com/download/ZAI-Update.zip",
- "sha256": "0bb048de732b6d00ba2e22dc06a83fecd00a460d75c815bb9434c32685ff6e0d",
- "size": 1499508,
+ "sha256": "a1c90ce2b27372bd4e4bd99152d6e58b92559a8df3a1b5cd46e7c601a324d763",
+ "size": 1570281,
  "zip_portable": "https://zbzai.zyeemzia.com/download/ZAI-Portable-Update.zip",
- "sha256_portable": "620ff99eaea69439610b2f463aced2c5dbcdd5c7168e7f41ed399480dc52e587",
+ "sha256_portable": "3a329af1d5f7025f56029689d0bfe13ddc5481a97aedabb0a4a7800a74ed9ec4",
  "copyright": "Copyright © ZyeemZia"
 }
