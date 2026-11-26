@@ -1,15 +1,15 @@
 {
- "version": "2.0.16",
- "notes": "ZBZAI 2.0.16: Bangla is now understood word by word, in the knowledge vault and on the internet: a question written in Bangla is looked up in the Bangla encyclopedia and Bangla news and answered in Bangla. Answers written from the internet come faster. Everything you taught is kept.",
+ "version": "2.0.17",
+ "notes": "ZBZAI 2.0.17: a question about a medicine now lists the matching medicines on DIMS, each linked to its page. A translation gets links to compare it in DeepL, Reverso, Google Translate and Bing Translator, and with your own DeepL key DeepL's translation is shown too. Everything you taught is kept.",
  "zip_zbzai": "https://zbzai.zyeemzia.com/download/ZBZAI-Update.zip",
- "sha256_zbzai": "5786eb52262c00030f54d2bb12d991e5fa68c5aef81d1a61916017b87453d5ab",
- "size_zbzai": 1579220,
+ "sha256_zbzai": "e168b9ab2b12097962d28f3c7c66854356820530ff25993361194f139d3a9ae7",
+ "size_zbzai": 1601698,
  "zip_zbzai_portable": "https://zbzai.zyeemzia.com/download/ZBZAI-Engine.zip",
- "sha256_zbzai_portable": "d0ac6f5ef1dfc9bb46ab878c960d99af794bec514aa6c534297c7898758de7aa",
+ "sha256_zbzai_portable": "6870e6533a7bd3e4b7f9c55a186afc517d54fff095265784386663d8060763bf",
  "zip": "https://zbzai.zyeemzia.com/download/ZAI-Update.zip",
- "sha256": "5f2b932e955f7ea528aa3d9563dba20e38c5e405e21b7785861d1e6278b32f50",
- "size": 1579606,
+ "sha256": "604e6df78a30bc63215f297bd93bac01e7cee3244f224ed9d18de17112dafa03",
+ "size": 1602084,
  "zip_portable": "https://zbzai.zyeemzia.com/download/ZAI-Portable-Update.zip",
- "sha256_portable": "245747e9104816eb023c9a19f405b779246b8df2e3b7caffcc995f02d15c86ab",
+ "sha256_portable": "9b64289a412b634aa3f641e75836efbc9fafa7822d1890a904779cb3989c8a10",
  "copyright": "Copyright © ZyeemZia"
 }
