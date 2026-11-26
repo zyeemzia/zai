@@ -1,15 +1,15 @@
 {
- "version": "2.0.17",
- "notes": "ZBZAI 2.0.17: a question about a medicine now lists the matching medicines on DIMS, each linked to its page. A translation gets links to compare it in DeepL, Reverso, Google Translate and Bing Translator, and with your own DeepL key DeepL's translation is shown too. Everything you taught is kept.",
+ "version": "2.0.18",
+ "notes": "ZBZAI 2.0.18: the medicine links from DIMS are now only added under the answer, and the AI no longer writes or mentions them itself. Everything you taught is kept.",
  "zip_zbzai": "https://zbzai.zyeemzia.com/download/ZBZAI-Update.zip",
- "sha256_zbzai": "e168b9ab2b12097962d28f3c7c66854356820530ff25993361194f139d3a9ae7",
- "size_zbzai": 1601698,
+ "sha256_zbzai": "f5e3f811ce5a75caf854fd2ad7375c0253ebe0f922d74cac3fc0143bcfaf36f0",
+ "size_zbzai": 1601739,
  "zip_zbzai_portable": "https://zbzai.zyeemzia.com/download/ZBZAI-Engine.zip",
- "sha256_zbzai_portable": "6870e6533a7bd3e4b7f9c55a186afc517d54fff095265784386663d8060763bf",
+ "sha256_zbzai_portable": "60542d9fc2670851be4afbd1a208c88f685c75533ff6181ee157cb8eb015d617",
  "zip": "https://zbzai.zyeemzia.com/download/ZAI-Update.zip",
- "sha256": "604e6df78a30bc63215f297bd93bac01e7cee3244f224ed9d18de17112dafa03",
- "size": 1602084,
+ "sha256": "445ea0b79b8208a8b556fcf48df27560432fa65c4e422907ceef412d55720209",
+ "size": 1602125,
  "zip_portable": "https://zbzai.zyeemzia.com/download/ZAI-Portable-Update.zip",
- "sha256_portable": "9b64289a412b634aa3f641e75836efbc9fafa7822d1890a904779cb3989c8a10",
+ "sha256_portable": "edba4e55ac569c3cc9b7fc664dbd79a066c98d26c7b7c7c0a62f391c2fbaa04e",
  "copyright": "Copyright © ZyeemZia"
 }
