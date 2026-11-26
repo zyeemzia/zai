@@ -1,15 +1,15 @@
 {
- "version": "2.0.18",
- "notes": "ZBZAI 2.0.18: the medicine links from DIMS are now only added under the answer, and the AI no longer writes or mentions them itself. Everything you taught is kept.",
+ "version": "2.0.19",
+ "notes": "ZBZAI 2.0.19: on a phone, tapping the message box no longer zooms the page in. Everything you taught is kept.",
  "zip_zbzai": "https://zbzai.zyeemzia.com/download/ZBZAI-Update.zip",
- "sha256_zbzai": "f5e3f811ce5a75caf854fd2ad7375c0253ebe0f922d74cac3fc0143bcfaf36f0",
- "size_zbzai": 1601739,
+ "sha256_zbzai": "2632f960698c68db463484e242d543f44d28aef2a4197f3aa2c716e9854a037a",
+ "size_zbzai": 1601814,
  "zip_zbzai_portable": "https://zbzai.zyeemzia.com/download/ZBZAI-Engine.zip",
- "sha256_zbzai_portable": "60542d9fc2670851be4afbd1a208c88f685c75533ff6181ee157cb8eb015d617",
+ "sha256_zbzai_portable": "e383c03d85a70551d4311a5c7dea1d9d98e2165d83f469a7e843b28d338b0639",
  "zip": "https://zbzai.zyeemzia.com/download/ZAI-Update.zip",
- "sha256": "445ea0b79b8208a8b556fcf48df27560432fa65c4e422907ceef412d55720209",
- "size": 1602125,
+ "sha256": "5e578aa57f86be77a487860e0539d6fc6ac2ea25ed53329ef5b7dd2e74b3fa72",
+ "size": 1602200,
  "zip_portable": "https://zbzai.zyeemzia.com/download/ZAI-Portable-Update.zip",
- "sha256_portable": "edba4e55ac569c3cc9b7fc664dbd79a066c98d26c7b7c7c0a62f391c2fbaa04e",
+ "sha256_portable": "d45af3eaa4469d5d024a7f5b2d12d5b676acc425ecf46fa7a3d4e92840506bbe",
  "copyright": "Copyright © ZyeemZia"
 }
