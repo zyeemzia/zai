@@ -283,3 +283,12 @@ a.primary.btn { display: inline-flex; align-items: center; gap: 6px; text-decora
 .zz-pic { display: inline-block; margin: 4px 8px 4px 0; border-radius: 12px; overflow: hidden; line-height: 0; vertical-align: top; border: 1px solid var(--line); }
 .zz-pic img { display: block; width: auto; max-width: min(100%, 300px); height: 190px; object-fit: cover; }
 @media (max-width: 520px) { .zz-pic img { height: 150px; max-width: 100%; } }
+/* ---------- readable colours ----------
+   Button text sits on a thin shade over the theme gradient, so it reads on every colour theme:
+   a darker shade under white text in light mode, a lighter one under dark text in dark mode. */
+.primary, .seg button[aria-pressed="true"] { background: linear-gradient(rgba(0, 0, 0, .32), rgba(0, 0, 0, .32)), var(--grad); color: #fff; }
+:root { --ink3: #5b6388; --bad: #b91c1c; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --ink3: #959ec9; --bad: #f87171; }
+  :root:not([data-theme="light"]) .primary, :root:not([data-theme="light"]) .seg button[aria-pressed="true"] { background: linear-gradient(rgba(255, 255, 255, .24), rgba(255, 255, 255, .24)), var(--grad); color: #0a0f26; } }
+:root[data-theme="dark"] { --ink3: #959ec9; --bad: #f87171; }
+:root[data-theme="dark"] .primary, :root[data-theme="dark"] .seg button[aria-pressed="true"] { background: linear-gradient(rgba(255, 255, 255, .24), rgba(255, 255, 255, .24)), var(--grad); color: #0a0f26; }
