@@ -10,8 +10,8 @@
 <meta name="theme-color" content="#070a17">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="ZBZAI"><meta name="application-name" content="ZBZAI">
-<link rel="stylesheet" href="app.css?v=f43a46a256">
-<link rel="stylesheet" href="icons.css?v=488d0ecedf">
+<link rel="stylesheet" href="app.css?v=4de851a0c3">
+<link rel="stylesheet" href="icons.css?v=ecd94c9d37">
 </head>
 <body>
 <header class="top">
@@ -61,7 +61,7 @@
         <label class="mrow check" title="Reads an encyclopedia, published studies and the news, then answers as a report with numbered sources"><input type="checkbox" id="research"> Research: read many sources and cite them</label>
         <button type="button" role="menuitem" data-m="keys"><i class="gi gi-spark" aria-hidden="true"></i>Keyboard shortcuts</button>
       </div>
-      <input type="file" id="askFile" hidden multiple accept=".txt,.md,.csv,.tsv,.json,.html,.htm,.xml,.yaml,.yml,.log,.rtf,.docx,.doc,.odt,.xlsx,.xls,.ods,.pptx,.ppt,.odp,.pdf,.epub,.py,.js,.ts,.java,.c,.cpp,.cs,.go,.php,.sql,.css,.srt,.vtt,image/*,audio/*,video/*">
+      <input type="file" id="askFile" hidden multiple accept=".txt,.md,.csv,.tsv,.json,.html,.htm,.xml,.yaml,.yml,.log,.rtf,.docx,.doc,.odt,.xlsx,.xls,.ods,.pptx,.ppt,.odp,.pdf,.epub,.py,.js,.ts,.java,.c,.cpp,.cs,.go,.php,.sql,.css,.srt,.vtt,image/*,audio/*,video/*"><input type="file" id="foldFiles" multiple hidden>
       <textarea id="input" rows="1" placeholder="Message ZBZAI…" aria-label="Your message" spellcheck="true" autocorrect="on" autocapitalize="sentences"></textarea>
       <button type="button" id="mic" class="tool" hidden aria-label="Speak your message" title="Voice typing"><i class="gi gi-mic" aria-hidden="true"></i></button>
       <button type="submit" id="send" aria-label="Send"><i class="gi gi-send" aria-hidden="true"></i></button>
@@ -331,19 +331,12 @@
           <option value="vault">Knowledge vault only (no model, free)</option>
           <optgroup label="Optional: with your own key">
             <option value="cloud">Claude (Anthropic)</option>
-            <option value="openai">ChatGPT (OpenAI)</option>
-            <option value="gemini">Google Gemini (free tier available)</option>
-            <option value="deepseek">DeepSeek</option>
-            <option value="groq">Groq (free tier available)</option>
-            <option value="mistral">Mistral</option>
-            <option value="xai">Grok (xAI)</option>
-            <option value="openrouter">OpenRouter (many models, one key)</option>
           </optgroup>
         </select>
       </label>
       <label>Local model (Ollama) <input id="sModel" placeholder="empty = first installed model"></label>
       <label>Ollama address <input id="sOllama" placeholder="http://127.0.0.1:11434"></label>
-      <details class="adv"><summary>Optional: more AI brains with your own keys (Claude, ChatGPT, Gemini, DeepSeek, Groq, Mistral, Grok, OpenRouter)</summary>
+      <details class="adv"><summary>Optional: more AI brains with your own keys, or any service by its link</summary>
         <p class="muted small">Not needed: ZBZAI is free with its local model and ZyeemZia AI online. Each service bills or limits your own key; Gemini and Groq have free tiers. Keys stay on the ZBZAI computer. Paste a key, pick that brain above and save; a brain with a key also answers when the chosen one cannot. Type a dash (-) to remove a saved key.</p>
         <div id="sProv" class="prov"></div>
       </details>
@@ -396,9 +389,9 @@
 <script src="autocorrect.js?v=37bc51e766"></script>
 <script src="qr.js?v=4e6d37b618"></script>
 <script src="codebox.js?v=3ddf181fc8"></script>
-<script src="seed.js?v=11c03d49a1"></script>
+<script src="seed.js?v=7a0329afd5"></script>
 <script src="demo-backend.js?v=3ed8ee0a04"></script>
-<script src="app.js?v=5886658c65"></script>
+<script src="app.js?v=3ed74b1f4a"></script>
 <script src="studio.js?v=7a01ef7532"></script>
 <script src="coworkers.js?v=755f62e48c"></script>
 <script>/* ZyeemZia house style: justified writing. Paragraphs and list text that read left-aligned are justified; centred text, headings, buttons and columns too narrow to justify cleanly stay as they are. Copyright © ZyeemZia */(function(){var S='p,li,dd,blockquote';function j(r){if(!r||!r.querySelectorAll)return;var L=r.querySelectorAll(S);for(var i=0;i<L.length;i++){var e=L[i];if(e.getAttribute('data-zj'))continue;e.setAttribute('data-zj','1');var a=getComputedStyle(e).textAlign;if(a==='start'||a==='left'||a==='-webkit-auto'){var w=e.clientWidth;if(!w||w>=280)e.style.textAlign='justify'}}}function go(){j(document);if(!window.MutationObserver)return;new MutationObserver(function(m){for(var i=0;i<m.length;i++){var N=m[i].addedNodes;for(var k=0;k<N.length;k++){var n=N[k];if(n.nodeType===1)j(n.matches&&n.matches(S)?n.parentNode:n)}}}).observe(document.body,{childList:true,subtree:true})}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()})()</script>

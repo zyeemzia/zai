@@ -1,15 +1,15 @@
 {
- "version": "2.0.20",
- "notes": "ZBZAI 2.0.20: clearer colours. Buttons, hints and links are easier to read in light and dark. Everything you taught is kept.",
+ "version": "2.0.21",
+ "notes": "ZBZAI 2.0.21: folders for your chats, with their own instructions and files; more free AI services, including NVIDIA Nemotron, and any service by its link; easier-to-read small text. Everything you taught is kept.",
  "zip_zbzai": "https://zbzai.zyeemzia.com/download/ZBZAI-Update.zip",
- "sha256_zbzai": "dd9e5783f01fbc5e52c9529144ca8289dfdd0a16abd3dda2ced436f8d487539a",
- "size_zbzai": 1602048,
+ "sha256_zbzai": "d9e9d757eda511b452d886058e91a1735bd95c6b771fb0f1a092ed4e72507171",
+ "size_zbzai": 1612186,
  "zip_zbzai_portable": "https://zbzai.zyeemzia.com/download/ZBZAI-Engine.zip",
- "sha256_zbzai_portable": "a1c22c5445f819c421377af4187c04159a1f1d768b9e62f1fc5319fe474f6a06",
+ "sha256_zbzai_portable": "0f4573339c84613b20cf8e5ec5a65eb84494d632fe3aa5a31cb6e2dcf41e027d",
  "zip": "https://zbzai.zyeemzia.com/download/ZAI-Update.zip",
- "sha256": "d88990d220891b97678295e85ff186f20354ac3c9bae5fdc04aa2b2e3c54e981",
- "size": 1602434,
+ "sha256": "c747deaa86ef3bb30ab13a16eb1e325235ab0ececea15c87476c03de824cfb99",
+ "size": 1612572,
  "zip_portable": "https://zbzai.zyeemzia.com/download/ZAI-Portable-Update.zip",
- "sha256_portable": "71c8f23d801b94f465b9ce97416ca9e3845d4b21496b16efc58e9bbe4e9580eb",
+ "sha256_portable": "07786c5dca40a56be95146482e8a1544e0ed3e7295a3f42d7221c4fa936d6cbb",
  "copyright": "Copyright © ZyeemZia"
 }
