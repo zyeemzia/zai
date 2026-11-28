@@ -30,7 +30,7 @@ a{color:var(--blue)}h1,h2,h3{font-family:Rajdhani,Inter,sans-serif;line-height:1
 .top{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;gap:14px;min-height:60px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:700 1.35rem Rajdhani,sans-serif}
-.logo img{width:34px;height:34px;border-radius:10px}.logo .tm{font-size:.5em;margin-left:1px;vertical-align:super;opacity:.85}.logo b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo img{width:34px;height:34px;border-radius:10px}.logo .tm{font-size:max(12px, .5em);margin-left:1px;vertical-align:super;opacity:.85}.logo b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .top nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}.top nav a{color:var(--ink2);text-decoration:none;font-weight:600;font-size:.92rem;padding:7px 11px;border-radius:10px}
 .top nav a:hover{background:var(--bg2);color:var(--ink)}.top nav{align-items:center}.nav-install{display:contents}.top .zz-btn{color:var(--ink);padding:8px 13px;font-size:.85rem}@media(max-width:700px){.top .zz-btn{width:38px;height:38px;padding:0;justify-content:center}.top .zz-btn span{display:none}}
 @media(max-width:700px){.top nav a.hide{display:none}}
@@ -53,7 +53,7 @@ section{padding:56px 0}.sec-h{text-align:center;max-width:700px;margin:0 auto 30
 .steps{counter-reset:s;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
 .steps .card{position:relative;padding-top:30px}.steps .card::before{counter-increment:s;content:counter(s);position:absolute;top:-14px;left:20px;width:34px;height:34px;border-radius:50%;background:var(--grad);color:#fff;font:700 1rem Rajdhani;display:grid;place-items:center}
 .brains{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
-.brain{border-left:4px solid var(--c)}.brain .tag{font:700 .78rem Rajdhani;letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
+.brain{border-left:4px solid var(--c)}.brain .tag{font:700 max(12px, .78rem) Rajdhani;letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
 .demo{display:grid;grid-template-columns:1fr 360px;gap:30px;align-items:center}
 @media(max-width:900px){.demo{grid-template-columns:1fr}}
 .phone{width:min(360px,100%);height:700px;margin:0 auto;border-radius:38px;border:10px solid #10142a;background:#10142a;box-shadow:0 30px 80px -30px rgba(0,0,0,.6);overflow:hidden}
