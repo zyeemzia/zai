@@ -80,7 +80,7 @@
         local: { available: false, models: [], model: null }, cloud: { available: false, why: 'not part of the web demo', model: 'claude-opus-5-5' },
         vault: { documents: V.docs.length, passages: V.passages.length, search: 'browser' },
         online: { available: false, why: 'the downloaded engine uses ZyeemZia AI online for free', name: 'ZyeemZia AI (free)' }, update: { available: false }, copyright: 'Copyright © ZyeemZia',
-        urls: ['http://192.168.1.20:8765/  (example: your computer shows its own)'], learning_open_to_all: true };
+        urls: ['http://192.168.1.20:8765/'], learning_open_to_all: true };
     },
     async knowledge() { return V.docs; },
     async search(q) { return search(q, 10); },
